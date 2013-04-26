@@ -1,2 +1,2 @@
-vim-config
+Lots of configs
 ==========
