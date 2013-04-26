@@ -1,0 +1,7 @@
+[user]
+	name = Kostya Bazhanov
+	email = kostyabazhanov@mail.ru
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
