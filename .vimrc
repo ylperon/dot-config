@@ -11,6 +11,7 @@ set autoindent
 set smartindent
 set cursorline
 set incsearch
+set hlsearch
 set ignorecase
 set spell
 
