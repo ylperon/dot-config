@@ -10,3 +10,4 @@ Bundle 'gmarik/vundle'
 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
+Bundle 'clang-complete'
