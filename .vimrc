@@ -46,6 +46,9 @@ map! <F7> <ESC>:tabprevious<CR>i
 "Plugins
 let g:indent_guides_guide_size=1
 
+"Autocompletition command for jedi (python autocomplete for vim)
+let g:jedi#autocompletion_command = "<C-x>"
+
 " NERDTree
 map <F4> :NERDTreeToggle<CR>
 map! <F4> <ESC>:NERDTreeToggle<CR>
