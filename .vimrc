@@ -53,6 +53,10 @@ let g:jedi#autocompletion_command = "<C-x>"
 map <F4> :NERDTreeToggle<CR>
 map! <F4> <ESC>:NERDTreeToggle<CR>
 
+"vim-airline
+set laststatus=2
+let g:airline_theme='solarized'
+
 autocmd BufEnter * lcd %:p:h
 
 map <C-l> <C-w>l
