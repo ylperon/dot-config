@@ -31,6 +31,8 @@ function! airline#extensions#apply_window_overrides()
     call s:override_left_only('Tagbar', '')
   elseif &ft == 'vimshell'
     call s:override_left_only('vimshell', vimshell#get_status_string())
+  elseif &ft == 'vimfiler'
+    call s:override_left_only('vimfiler', vimfiler#get_status_string())
   elseif &ft == 'minibufexpl'
     call s:override_left_only('MiniBufExplorer', '')
   endif
@@ -38,6 +40,7 @@ endfunction
 
 function! airline#extensions#load()
   let g:unite_force_overwrite_statusline = 0
+  let g:vimfiler_force_overwrite_statusline = 0
 
   if get(g:, 'loaded_ctrlp', 0)
     call airline#extensions#ctrlp#load_ctrlp_hi()
