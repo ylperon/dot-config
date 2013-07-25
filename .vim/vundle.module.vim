@@ -11,6 +11,8 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'clang-complete'
-Bundle 'davidhalter/jedi-vim'
 Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
+if has('python')
+    Bundle 'davidhalter/jedi-vim'
+    Bundle 'tpope/vim-fugitive'
+endif
