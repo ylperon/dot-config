@@ -10,9 +10,20 @@ Bundle 'gmarik/vundle'
 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
-Bundle 'clang-complete'
 Bundle 'bling/vim-airline'
+
+"Git staff
 if has('python')
-    Bundle 'davidhalter/jedi-vim'
     Bundle 'tpope/vim-fugitive'
 endif
+
+"C++ staff
+Bundle 'clang-complete'
+
+"Python staff
+if has('python')
+    Bundle 'davidhalter/jedi-vim'
+endif
+
+"Perl staff
+Bundle 'c9s/perlomni.vim'
