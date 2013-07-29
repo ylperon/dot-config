@@ -21,7 +21,11 @@ set listchars=trail:.
 
 set number
 
+"Search
 set showmatch
+
+"Opening splits
+set splitright
 
 " Encoding
 set encoding=utf-8
