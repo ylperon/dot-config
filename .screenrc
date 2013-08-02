@@ -1,0 +1,2 @@
+# Fixing the alternate screen problem
+termcapinfo xterm* ti@:te@
