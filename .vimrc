@@ -64,6 +64,9 @@ map! <F4> <ESC>:NERDTreeToggle<CR>
 set laststatus=2
 let g:airline_theme='solarized'
 
+"clang-complete
+let g:clang_user_options = '-std=c++11 -stdlib=libc++'
+
 autocmd BufEnter * lcd %:p:h
 
 map <C-l> <C-w>l
