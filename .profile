@@ -21,3 +21,6 @@ alias xelatex=/usr/texbin/xelatex
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 fi
+
+# SVN settings
+export SVN_EDITOR=vim
