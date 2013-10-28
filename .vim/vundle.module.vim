@@ -19,6 +19,7 @@ endif
 
 " C++ staff
 Bundle 'clang-complete'
+Bundle 'a.vim'
 
 " Python staff
 if has('python')
