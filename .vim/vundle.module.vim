@@ -12,18 +12,21 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 
-"Git staff
+" Git staff
 if has('python')
     Bundle 'tpope/vim-fugitive'
 endif
 
-"C++ staff
+" C++ staff
 Bundle 'clang-complete'
 
-"Python staff
+" Python staff
 if has('python')
     Bundle 'davidhalter/jedi-vim'
 endif
 
-"Perl staff
+" Perl staff
 Bundle 'c9s/perlomni.vim'
+
+" SVN and Git staff
+Bundle 'vcscommand.vim'
