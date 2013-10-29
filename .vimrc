@@ -1,9 +1,9 @@
-"Common
+" Common
 set nocompatible
 
 set backspace=2
 
-"Editor
+" Editor
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -21,10 +21,10 @@ set listchars=trail:.
 
 set number
 
-"Search
+" Search
 set showmatch
 
-"Opening splits
+" Opening splits
 set splitright
 
 " Encoding
@@ -38,7 +38,7 @@ so ~/.vim/colors.module.vim
 filetype plugin on
 filetype indent on
 
-" remove trailing whitespaces on save
+" Remove trailing whitespaces on save
 autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
 " Switch between tabs on F7 and F8
@@ -50,21 +50,27 @@ map! <F7> <ESC>:tabprevious<CR>i
 "Plugins
 let g:indent_guides_guide_size=1
 
-"Vundle configs
+" Vundle configs
 let g:vundle_default_git_proto = 'git'
 
-"Autocompletition command for jedi (python autocomplete for vim)
+" Autocompletition command for jedi (python autocomplete for vim)
 let g:jedi#autocompletion_command = "<C-x>"
 
 " NERDTree
 map <F4> :NERDTreeToggle<CR>
 map! <F4> <ESC>:NERDTreeToggle<CR>
 
-"vim-airline
+" vim-airline
 set laststatus=2
 let g:airline_theme='solarized'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.branch = '⎇'
 
-"clang-complete
+" clang-complete
 let g:clang_user_options = '-std=c++11 -stdlib=libc++'
 
 autocmd BufEnter * lcd %:p:h
