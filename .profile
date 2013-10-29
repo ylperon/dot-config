@@ -1,12 +1,12 @@
 PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
 
-export LANG=ru_RU.UTF-8
+export LANG=en_US.UTF-8
 export LC_CTYPE="ru_RU.UTF-8"
 export LC_NUMERIC="C"
 export LC_TIME="ru_RU.UTF-8"
 export LC_COLLATE="ru_RU.UTF-8"
 export LC_MONETARY="ru_RU.UTF-8"
-export LC_MESSAGES="ru_RU.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
 export LC_PAPER="ru_RU.UTF-8"
 export LC_NAME="ru_RU.UTF-8"
 export LC_ADDRESS="ru_RU.UTF-8"
