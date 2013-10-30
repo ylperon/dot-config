@@ -17,7 +17,8 @@ set spell
 
 set showmatch
 set list
-set listchars=trail:.
+set listchars=trail:·
+set listchars=tab:→→
 
 set number
 
