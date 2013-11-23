@@ -74,6 +74,9 @@ let g:airline_symbols.branch = '⎇'
 " clang-complete
 let g:clang_user_options = '-std=c++11 -stdlib=libc++'
 
+" code guidelines
+set colorcolumn=100
+
 autocmd BufEnter * lcd %:p:h
 
 map <C-l> <C-w>l
