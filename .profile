@@ -1,4 +1,8 @@
-PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    PS1='me@yazevnul-mac:\W\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
+fi
 
 export LANG=en_US.UTF-8
 export LC_CTYPE="ru_RU.UTF-8"
@@ -14,13 +18,14 @@ export LC_TELEPHONE="ru_RU.UTF-8"
 export LC_MEASUREMENT="ru_RU.UTF-8"
 export LC_IDENTIFICATION="ru_RU.UTF-8"
 
-alias pdflatex=/usr/texbin/pdflatex
-alias bibtex=/usr/texbin/bibtex
-alias xelatex=/usr/texbin/xelatex
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin
+
     alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 fi
 
 # SVN settings
 export SVN_EDITOR=vim
+
+# clang-analyzer
+alias -- scan-build='~/tools/clang-analyzer/scan-build'
