@@ -1,4 +1,8 @@
 import rlcompleter
 import readline
+import platform
 
-readline.parse_and_bind('tab:complete')
+if 'Darwin' == platform.system():
+    readline.parse_and_bind ("bind ^I rl_complete")
+else:
+    readline.parse_and_bind('tab:complete')
