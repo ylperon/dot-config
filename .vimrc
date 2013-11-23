@@ -55,7 +55,7 @@ let g:indent_guides_guide_size=1
 let g:vundle_default_git_proto = 'git'
 
 " Autocompletition command for jedi (python autocomplete for vim)
-let g:jedi#autocompletion_command = "<C-x>"
+let g:jedi#completions_command = "<C-x>"
 
 " NERDTree
 map <F4> :NERDTreeToggle<CR>
