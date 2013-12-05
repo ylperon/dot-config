@@ -1,6 +1,6 @@
 #!/bin/sh
 echo $'Removing existing .vimrc'
-rm ~/.vim
+rm ~/.vimrc
 echo $'Removing existing .vim/'
 rm -rf ~/.vim
 echo $'Copying new .vimrc'
