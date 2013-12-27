@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 echo $'Removing existing .vimrc'
 rm ~/.vimrc
 echo $'Removing existing .vim/'
