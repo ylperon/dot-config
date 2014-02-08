@@ -5,18 +5,18 @@ else
 fi
 
 export LANG=en_US.UTF-8
-export LC_CTYPE="ru_RU.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 export LC_NUMERIC="C"
-export LC_TIME="ru_RU.UTF-8"
-export LC_COLLATE="ru_RU.UTF-8"
-export LC_MONETARY="ru_RU.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
-export LC_PAPER="ru_RU.UTF-8"
-export LC_NAME="ru_RU.UTF-8"
-export LC_ADDRESS="ru_RU.UTF-8"
-export LC_TELEPHONE="ru_RU.UTF-8"
-export LC_MEASUREMENT="ru_RU.UTF-8"
-export LC_IDENTIFICATION="ru_RU.UTF-8"
+export LC_PAPER="en_US.UTF-8"
+export LC_NAME="en_US.UTF-8"
+export LC_ADDRESS="en_US.UTF-8"
+export LC_TELEPHONE="en_US.UTF-8"
+export LC_MEASUREMENT="en_US.UTF-8"
+export LC_IDENTIFICATION="en_US.UTF-8"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin

@@ -1,1 +1,3 @@
-library(colorout)
+if (Sys.getenv("TERM") != "") {
+    library(colorout)
+}
