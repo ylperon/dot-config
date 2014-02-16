@@ -22,6 +22,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin
 
     alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+
+    # virtualenv for Yandex School of Data Analysis
+    alias -- activate-ysda-virtualenv='source ~/Documents/my/ysda/ysda-env/bin/activate'
 fi
 
 # SVN settings
