@@ -1,33 +1,36 @@
 filetype on
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdtree'
-Bundle 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
 
 " Git staff
 if has('python')
-    Bundle 'tpope/vim-fugitive'
+    Plugin 'tpope/vim-fugitive'
 endif
 
 " C++ staff
-Bundle 'clang-complete'
-Bundle 'a.vim'
+Plugin 'clang-complete'
+Plugin 'a.vim'
 
 " Python staff
 if has('python')
-    Bundle 'davidhalter/jedi-vim'
+    Plugin 'davidhalter/jedi-vim'
 endif
 
 " Perl staff
-Bundle 'c9s/perlomni.vim'
+Plugin 'c9s/perlomni.vim'
 
 " SVN and Git staff
-Bundle 'vcscommand.vim'
+Plugin 'vcscommand.vim'
+
+call vundle#end()
+filetype plugin indent on
