@@ -26,9 +26,6 @@ if has('python')
     Plugin 'davidhalter/jedi-vim'
 endif
 
-" Perl staff
-Plugin 'c9s/perlomni.vim'
-
 " SVN and Git staff
 Plugin 'vcscommand.vim'
 
