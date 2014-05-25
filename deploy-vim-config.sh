@@ -11,4 +11,7 @@ echo 'Installing Vundle (https://github.com/gmarik/Vundle.vim) for more details'
 git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
 echo 'Installing plugins...'
 vim +PluginInstall +qall
+echo "Installing YouCompleteMe"
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
 echo 'Done'
