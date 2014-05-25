@@ -17,7 +17,6 @@ cd ~/.vim/bundle/YouCompleteMe
 echo "Copy default config for YouCompleteMe"
 mkdir ~/.vim/bundle/YouCompleteMe/cpp
 mkdir ~/.vim/bundle/YouCompleteMe/cpp/ycm
-wget "https://raw.githubusercontent.com/Valloric/ycmd/master/cpp/ycm/.ycm_extra_conf.py" \
-    --no-check-certificate \
-    -O ~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py
+# .ycm_extra_conf.py via https://gist.github.com/locojay/4950253
+cp .ycm_extra_conf.py ~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py
 echo 'Done'
