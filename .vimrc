@@ -48,7 +48,7 @@ map! <F8> <ESC>:tabnext<CR>i
 map <F7> :tabprevious<CR>
 map! <F7> <ESC>:tabprevious<CR>i
 
-"Plugins
+" Plugins
 let g:indent_guides_guide_size=1
 
 " Vundle configs
@@ -71,8 +71,8 @@ let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
 let g:airline_symbols.branch = '⎇'
 
-" clang-complete
-let g:clang_user_options = '-std=c++11 -stdlib=libc++'
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 " code guidelines
 set colorcolumn=100

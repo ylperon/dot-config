@@ -14,4 +14,10 @@ vim +PluginInstall +qall
 echo "Installing YouCompleteMe"
 cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer
+echo "Copy default config for YouCompleteMe"
+mkdir ~/.vim/bundle/YouCompleteMe/cpp
+mkdir ~/.vim/bundle/YouCompleteMe/cpp/ycm
+wget "https://raw.githubusercontent.com/Valloric/ycmd/master/cpp/ycm/.ycm_extra_conf.py" \
+    --no-check-certificate \
+    -O ~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py
 echo 'Done'
