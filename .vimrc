@@ -75,6 +75,9 @@ let g:airline_symbols.branch = '⎇'
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_default_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_error_symbol = '✗'
+let g:ycm_warning_symbol = '⚠'
+nnoremap <C-]> :YcmCompleter GoToDeclaration<CR>
 
 " code guidelines
 set colorcolumn=100
