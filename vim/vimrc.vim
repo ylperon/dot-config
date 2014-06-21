@@ -147,7 +147,8 @@ set iskeyword+=_,$,@,%,#
 
 " allow backspace and cursor keys to cross line boundaries
 set whichwrap+=<,>,h,l
-set incsearch           " ...but do highlight-as-I-type the search string
+set hlsearch            " highlight all search results
+set incsearch           " highlight-as-I-type the search string
 
 " enforces a specified line-length and auto inserts hard line breaks when we
 " reach the limit; in Normal mode, you can reformat the current paragraph with
