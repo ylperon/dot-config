@@ -29,7 +29,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Colors
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 
