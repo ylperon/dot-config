@@ -1,4 +1,5 @@
-if [[ "$OSTYPE" == "darwin"* ]]; then
+platform=$(uname)
+if [[ $platform == *Darwin* ]]; then
     PS1='me@yazevnul-mac:\W\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
@@ -18,7 +19,7 @@ export LC_TELEPHONE="en_US.UTF-8"
 export LC_MEASUREMENT="en_US.UTF-8"
 export LC_IDENTIFICATION="en_US.UTF-8"
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ platform == *Darwin* ]]; then
     export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin
 
     # virtualenv for Yandex School of Data Analysis
@@ -26,3 +27,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 export EDITOR=vim
+
+unset platform
