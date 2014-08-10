@@ -1,4 +1,5 @@
 #!/usr/vin/env sh
+set -x
 
 printf "%s\n" "Configuring..."
 
