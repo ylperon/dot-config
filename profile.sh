@@ -33,4 +33,4 @@ export EDITOR=vim
 
 unset platform
 
-printf 'I am listening, master.\n'
+printf 'I am listening, master.\n\n'
