@@ -19,13 +19,18 @@ export LC_TELEPHONE="en_US.UTF-8"
 export LC_MEASUREMENT="en_US.UTF-8"
 export LC_IDENTIFICATION="en_US.UTF-8"
 
-if [[ platform == *Darwin* ]]; then
-    export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin
+if [[ $platform == *Darwin* ]]; then
+    export PATH="/usr/local/bin:/usr/texbin:$PATH"
 
     # virtualenv for Yandex School of Data Analysis
     alias -- activate-ysda-virtualenv='source ~/Documents/my/ysda/ysda-env/bin/activate'
+
+    # use homebrew macvim instead of system Vim
+    alias vim='/usr/local/bin/vim'
 fi
 
 export EDITOR=vim
 
 unset platform
+
+printf 'I am listening, master.\n'
