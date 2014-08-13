@@ -323,7 +323,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 "                                YouCompleteMe                            "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:ycm_global_ycm_extra_conf = '$HOME/.vim/ycm_default_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_default_conf.py'
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
