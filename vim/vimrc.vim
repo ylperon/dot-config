@@ -8,7 +8,7 @@ set nocompatible
 filetype off
 
 " Setting up Vundle if there is none
-if !filereadable(expand('~/.vim/bundle/Vundle.vim/README.md'))
+if !filereadable(expand('$HOME/.vim/bundle/Vundle.vim/README.md'))
     echo "Installing Vundle.."
     echo ""
     silent !mkdir -p ~/.vim/bundle
@@ -323,9 +323,12 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 "                                YouCompleteMe                            "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_default_conf.py'
+let g:ycm_global_ycm_extra_conf = '$HOME/.vim/ycm_default_conf.py'
+let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_use_ultisnips_completer = 0
+let g:ycm_goto_buffer_command = 'new-tab'
 let g:ycm_error_symbol = '✗'
 let g:ycm_warning_symbol = '⚠'
 nnoremap <C-]> :YcmCompleter GoToDeclaration<CR>
