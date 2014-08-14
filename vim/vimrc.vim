@@ -35,12 +35,15 @@ Plugin 'bling/vim-airline'
 
 Plugin 'Valloric/YouCompleteMe'
 
-" SVN and Git staff
+" SVN and Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'vcscommand.vim'
 
-" C++ staff
+" C++
 Plugin 'a.vim'
+
+" Python
+Plugin 'andviro/flake8-vim'
 
 call vundle#end()
 
@@ -332,3 +335,9 @@ let g:ycm_goto_buffer_command = 'new-tab'
 let g:ycm_error_symbol = '✗'
 let g:ycm_warning_symbol = '⚠'
 nnoremap <C-]> :YcmCompleter GoToDeclaration<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                vim-flake8                               "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:PyFlakeMaxLineLength = 100
