@@ -28,6 +28,8 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'mhinz/vim-startify'
+
 " Colors
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
