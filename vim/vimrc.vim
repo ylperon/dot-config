@@ -29,6 +29,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'mhinz/vim-startify'
+Plugin 'majutsushi/tagbar'
 
 " Colors
 Plugin 'flazz/vim-colorschemes'
@@ -341,3 +342,10 @@ nnoremap <C-]> :YcmCompleter GoToDeclaration<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                vim-flake8                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             majutsushi/tagbar                           "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nmap <F9> :TagbarToggle<CR>
