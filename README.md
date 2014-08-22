@@ -47,4 +47,4 @@ Vim plugins:
 - [flake8-vim](https://github.com/andviro/flake8-vim)
 
 That is how it looks like on Mac OS X in Terminal.app.
-![Demonstration](http://i.imgur.com/3i1tunX.png)
+![Demonstration](http://i.imgur.com/CCqrOAi.png)
