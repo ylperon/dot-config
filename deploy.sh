@@ -1,4 +1,4 @@
-#!/usr/vin/env bash
+#!/usr/bin/env bash
 set -x
 
 printf "%s\n" "Configuring..."
