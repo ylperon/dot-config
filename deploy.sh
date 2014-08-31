@@ -1,4 +1,4 @@
-#!/usr/vin/env sh
+#!/usr/vin/env bash
 set -x
 
 printf "%s\n" "Configuring..."
@@ -8,11 +8,11 @@ printf "%s" "Configuring .profile..."
 printf "%s\n" "Done"
 
 printf "%s" "Configuring Tmux..."
-./tmux/deploy-tmux-config.sh
+./tmux/deploy.sh
 printf "%s\n" "Done"
 
 printf "%s" "Configuring Vim..."
-./vim/deploy-vim-config.sh
+./vim/deploy.sh
 printf "%s\n" "Done"
 
 printf "%s" "Configuring Python..."
