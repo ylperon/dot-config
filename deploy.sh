@@ -1,22 +1,26 @@
 #!/usr/bin/env bash
 set -x
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 printf "%s\n" "Configuring..."
 
 printf "%s" "Configuring .profile..."
-./bash/deploy.sh
+$DIR/bash/deploy.sh
 printf "%s\n" "Done"
 
 printf "%s" "Configuring Tmux..."
-./tmux/deploy.sh
+$DIR/tmux/deploy.sh
 printf "%s\n" "Done"
 
 printf "%s" "Configuring Vim..."
-./vim/deploy.sh
+$DIR/vim/deploy.sh
 printf "%s\n" "Done"
 
 printf "%s" "Configuring Python..."
-./python/deploy.sh
+$DIR/python/deploy.sh
 printf "%s\n" "Done"
 
 printf "%s\n" "Configuring...Done"
+
+unset DIR

@@ -1,28 +1,39 @@
 #!/usr/bin/env bash
 set -e
 
-THIS_DIRECTORY=$(pwd)
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 printf "%s" "Creating directory for old vimconfig..."
+if [ -d $HOME/old-vim-config ]; then
+    rm -rf $HOME/old-vim-config
+fi
 mkdir $HOME/old-vim-config
 printf "%s\n" "Done"
 printf "%s\n" "Old config will be stored in $HOME/old-vim-config"
 
 printf "%s" "Copying old config..."
-cp $HOME/.vimrc $HOME/old-vim-config
-cp -r $HOME/.vim $HOME/old-vim-config
+if [ -a $HOME/.vimrc ]; then
+    cp $HOME/.vimrc $HOME/old-vim-config
+fi
+if [ -d $HOME/.vim ]; then
+    cp -r $HOME/.vim $HOME/old-vim-config
+fi
 printf "%s\n" "Done"
 
-printf "%s" "Removing existing .vimrc..."
-rm $HOME/.vimrc
-printf "%s\n" "Done"
+if [ -a $HOME/.vimrc ]; then
+    printf "%s" "Removing existing .vimrc..."
+    rm $HOME/.vimrc
+    printf "%s\n" "Done"
+fi
 
-printf "%s" "Removing existing .vim directory..."
-rm -rf $HOME/.vim
-printf "%s\n" "Done"
+if [ -d $HOME/.vim ]; then 
+    printf "%s" "Removing existing .vim directory..."
+    rm -rf $HOME/.vim
+    printf "%s\n" "Done"
+fi
 
 printf "%s" "Copying new .vimrc..."
-cp vimrc.vim $HOME/.vimrc
+cp $DIR/vimrc.vim $HOME/.vimrc
 printf "%s\n" "Done"
 
 printf "%s\n" "Configuring vim..."
@@ -36,6 +47,8 @@ cd $HOME/.vim/bundle/YouCompleteMe/
 printf "%s\n" "Installing YouCompleteMe completer...Done"
 
 printf "%s" "Copying default YouCompleteMe config..."
-cp $THIS_DIRECTORY/ycm_default_conf.py $HOME/.vim
+cp $DIR/ycm_default_conf.py $HOME/.vim
 printf "%s\n" "Done"
 printf "%s\n" "Configuring vim...Done"
+
+unset DIR
