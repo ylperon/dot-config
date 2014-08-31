@@ -17,6 +17,10 @@ then
     printf "%s\n" "Done"
 fi
 
+if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+    tmux source-file $HOME/.tmux.conf
+fi
+
 printf "%s\n" "Configuring tmux: Done"
 
 unset DIR
