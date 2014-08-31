@@ -16,4 +16,8 @@ printf "%s" "Configuring Vim..."
 ./vim/deploy-vim-config.sh
 printf "%s\n" "Done"
 
+printf "%s" "Configuring Python..."
+./python/deploy.sh
+printf "%s\n" "Done"
+
 printf "%s\n" "Configuring...Done"
