@@ -4,8 +4,7 @@ set -x
 printf "%s\n" "Configuring..."
 
 printf "%s" "Configuring .profile..."
-cp profile.sh $HOME/.profile
-source $HOME/.profile
+./bash/deploy.sh
 printf "%s\n" "Done"
 
 printf "%s" "Configuring Tmux..."
