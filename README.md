@@ -6,19 +6,23 @@ Deployment
 
 Deploy all.
 
-    ./deploy-all.sh
+    ./deploy.sh
 
 Only shell. Don't forget to replace _yazevnul_ (this is my username) with yours.
 
-    cp profile.sh ~/.profile
+    ./bash/deploy.sh
 
 Only Tmux.
 
-    cd tmux && ./deploy-tmux-config.sh
+    ./tmux/deploy.sh
+
+Only Python.
+
+    ./python/deploy.sh
 
 Only Vim. This might take some time, especially with slow network connection.
 
-    cd vim && ./deploy-vim-config.sh
+    ./vim/deploy.sh
 
 
 Details
