@@ -3,52 +3,50 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-printf "%s" "Creating directory for old vimconfig..."
+printf 'Creating directory for old vimconfig...\n'
 if [ -d $HOME/old-vim-config ]; then
     rm -rf $HOME/old-vim-config
 fi
 mkdir $HOME/old-vim-config
-printf "%s\n" "Done"
-printf "%s\n" "Old config will be stored in $HOME/old-vim-config"
+printf 'Creating directory for old vimconfig...DONE\n'
+printf 'Old config will be stored in "%s"\n' "$HOME/old-vim-config"
 
-printf "%s" "Copying old config..."
+printf 'Copying old config...\n'
 if [ -a $HOME/.vimrc ]; then
     cp $HOME/.vimrc $HOME/old-vim-config
 fi
 if [ -d $HOME/.vim ]; then
     cp -r $HOME/.vim $HOME/old-vim-config
 fi
-printf "%s\n" "Done"
+printf 'Copying old config...DONE\n'
 
 if [ -a $HOME/.vimrc ]; then
-    printf "%s" "Removing existing .vimrc..."
+    printf 'Removing existing .vimrc \n'
     rm $HOME/.vimrc
-    printf "%s\n" "Done"
+    printf 'Removing existing .vimrc...DONE\n'
 fi
 
-if [ -d $HOME/.vim ]; then 
-    printf "%s" "Removing existing .vim directory..."
+if [ -d $HOME/.vim ]; then
+    printf 'Removing existing .vim directory...\n'
     rm -rf $HOME/.vim
-    printf "%s\n" "Done"
+    printf 'Removing existing .vim directory...DONE\n'
 fi
 
-printf "%s" "Copying new .vimrc..."
+printf 'Copying new .vimrc...\n'
 cp $DIR/vimrc.vim $HOME/.vimrc
-printf "%s\n" "Done"
+printf 'Copying new .vimrc...DONE\n'
 
-printf "%s\n" "Configuring vim..."
-printf "%s\n" "Installing plugins..."
+printf 'Installing plugins...\n'
 vim +PluginInstall +qall
-printf "%s\n" "Installing plugins...Done"
+printf 'Installing plugins...DONE\n'
 
-printf "%s\n" "Installing YouCompleteMe completer..."
+printf 'Installing YouCompleteMe C-family completer...\n'
 cd $HOME/.vim/bundle/YouCompleteMe/
 ./install.sh --clang-completer
-printf "%s\n" "Installing YouCompleteMe completer...Done"
+printf 'Installing YouCompleteMe C-family completer...DONE\n'
 
-printf "%s" "Copying default YouCompleteMe config..."
+printf 'Copying default YouCompleteMe config...\n'
 cp $DIR/ycm_default_conf.py $HOME/.vim
-printf "%s\n" "Done"
-printf "%s\n" "Configuring vim...Done"
+printf 'Copying default YouCompleteMe config...DONE\n'
 
 unset DIR

@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
-set -x
+set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-printf "%s\n" "Configuring..."
+printf 'Configuring...\n'
 
-printf "%s" "Configuring .profile..."
+printf 'Configuring bash...\n'
 $DIR/bash/deploy.sh
-printf "%s\n" "Done"
+printf 'Configuring bash...DONE\n'
 
-printf "%s" "Configuring Tmux..."
+printf 'Configuring Tmux...\n'
 $DIR/tmux/deploy.sh
-printf "%s\n" "Done"
+printf 'Configuring Tmux...DONE\n'
 
-printf "%s" "Configuring Vim..."
+printf 'Configuring Vim...\n'
 $DIR/vim/deploy.sh
-printf "%s\n" "Done"
+printf 'Configuring Vim...DONE\n'
 
-printf "%s" "Configuring Python..."
+printf 'Configuring Python...\n'
 $DIR/python/deploy.sh
-printf "%s\n" "Done"
+printf 'Configuring Python...DONE\n'
 
-printf "%s\n" "Configuring...Done"
+printf 'Configuring...DONE\n'
 
 unset DIR
