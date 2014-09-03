@@ -50,9 +50,6 @@ Plugin 'a.vim'
 " Python
 Plugin 'andviro/flake8-vim'
 
-" Markdown
-Plugin 'gabrielelana/vim-markdown'
-
 call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -51,7 +51,6 @@ Vim plugins:
 - [flake8-vim](https://github.com/andviro/flake8-vim)
 - [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 - [csv.vim](https://github.com/chrisbra/csv.vim)
-- [vim-markdown](https://github.com/gabrielelana/vim-markdown)
 
 That is how it looks like on Mac OS X in Terminal.app.
 ![Demonstration](http://i.imgur.com/CCqrOAi.png)
