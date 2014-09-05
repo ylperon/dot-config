@@ -7,7 +7,8 @@ cd $HOME/builds
 wget "ftp://invisible-island.net/ncurses/ncurses.tar.gz"
 tar -xzf ncurses.tar.gz
 cd ncurses-5.9
-./configure --prefix=$HOME/builds
+./configure --prefix=$HOME/builds \
+            --enable-256-color
 make
 make install
 printf "%s" "Building ncurses...Done"
