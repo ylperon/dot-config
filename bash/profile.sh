@@ -24,9 +24,6 @@ if [[ $platform == *Darwin* ]]; then
 
     # virtualenv for Yandex School of Data Analysis
     alias -- activate-ysda-virtualenv='source ~/Documents/my/ysda/ysda-env/bin/activate'
-
-    # use homebrew macvim instead of system Vim
-    alias vim='/usr/local/bin/vim'
 fi
 
 export EDITOR=vim
