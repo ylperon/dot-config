@@ -21,6 +21,8 @@ printf 'Configuring Python...\n'
 $DIR/python/deploy.sh
 printf 'Configuring Python...DONE\n'
 
+$DIR/bash/add_message.sh
+
 printf 'Configuring...DONE\n'
 
 unset DIR

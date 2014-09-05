@@ -29,7 +29,3 @@ fi
 export EDITOR=vim
 
 unset PLATFORM
-
-export PYTHONSTARTUP="$HOME/.python_startup"
-
-printf 'I am listening, master Kostya.\n\n'
