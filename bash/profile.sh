@@ -27,5 +27,6 @@ if [[ $PLATFORM == *Darwin* ]]; then
 fi
 
 export EDITOR=vim
+export SVN_EDITOR=vim
 
 unset PLATFORM
