@@ -1,5 +1,5 @@
-platform=$(uname)
-if [[ $platform == *Darwin* ]]; then
+PLATFORM=$(uname)
+if [[ $PLATFORM == *Darwin* ]]; then
     PS1='me@yazevnul-mac:\W\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
@@ -19,7 +19,7 @@ export LC_TELEPHONE="en_US.UTF-8"
 export LC_MEASUREMENT="en_US.UTF-8"
 export LC_IDENTIFICATION="en_US.UTF-8"
 
-if [[ $platform == *Darwin* ]]; then
+if [[ $PLATFORM == *Darwin* ]]; then
     export PATH="/usr/local/bin:/usr/texbin:$PATH"
 
     # virtualenv for Yandex School of Data Analysis
@@ -28,7 +28,7 @@ fi
 
 export EDITOR=vim
 
-unset platform
+unset PLATFORM
 
 export PYTHONSTARTUP="$HOME/.python_startup"
 
