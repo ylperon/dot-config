@@ -21,7 +21,9 @@ printf 'Configuring Python...\n'
 $DIR/python/deploy.sh
 printf 'Configuring Python...DONE\n'
 
-$DIR/bash/add_message.sh
+if [ "$1" == '--with-message' ]; then
+    $DIR/bash/add_message.sh
+fi
 
 printf 'Configuring...DONE\n'
 
