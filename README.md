@@ -1,4 +1,4 @@
-Configs for shell, Vim, Tmux and other.
+Configs for Bash, Vim, Tmux and other.
 =======================================
 
 Deployment
@@ -8,7 +8,7 @@ Deploy all.
 
     ./deploy.sh
 
-Only shell. Don't forget to replace _yazevnul_ (this is my username) with yours.
+Only Bash. Don't forget to replace _yazevnul_ (this is my username) with yours.
 
     ./bash/deploy.sh
 
