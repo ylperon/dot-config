@@ -14,13 +14,6 @@ if [[ "${PLATFORM}" == *Darwin* ]]; then
     printf 'Configuring Tmux for Mac OS X...DONE\n'
 fi
 
-printf 'Configurint Tmux colorscheme...\n'
-printf '\n' >> "${HOME}/.tmux.conf"
-TMUX_COLORSCHEME_URL='https://raw.githubusercontent.com/seebi/tmux-colors-solarized/master/tmuxcolors-256.conf'
-curl --fail --silent --show-error "${TMUX_COLORSCHEME_URL}" \
-    >> "${HOME}/.tmux.conf"
-printf 'Configurint Tmux colorscheme...DONE\n'
-
-if ! { [ "${TERM}" = 'screen' ] && [ -n "${TMUX}" ]; } then
+if { [ "${TERM}" = 'screen' ] && [ -n "${TMUX}" ]; } then
     tmux source-file $HOME/.tmux.conf > /dev/null
 fi
