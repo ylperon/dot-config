@@ -86,6 +86,12 @@ CPPFLAGS="-I$INSTALL_PREFIX/include" LDFLAGS="-L$INSTALL_PREFIX/lib" ./configure
             --with-tlib=ncurses \
             --enable-gui=gtk2 \
             --enable-cscope \
+            --disable-darwin \
+            --disable-netbeans \
+            --disable-gui \
+            --disable-xsmp \
+            --disable-xsmp-interact \
+            --without-x \
             --silent
 $MAKE_TOOL -j
 $MAKE_TOOL install
