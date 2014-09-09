@@ -9,6 +9,10 @@ printf 'Configuring bash...\n'
 $DIR/bash/deploy.sh
 printf 'Configuring bash...DONE\n'
 
+printf 'Configuring Midnight Commander...\n'
+$DIR/mc/deploy.sh
+printf 'Configuring Midnight Commander...DONE\n'
+
 printf 'Configuring Tmux...\n'
 $DIR/tmux/deploy.sh
 printf 'Configuring Tmux...DONE\n'
