@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# Bash script to install Vim on systems without root access.
+#
+# Python, Lua, Ruby and Perl support depends on the presence
+# of corresponding development packages.
 set -e
 
 usage() {
@@ -99,6 +104,12 @@ CPPFLAGS="-I${INSTALL_PREFIX}/include" LDFLAGS="-L${INSTALL_PREFIX}/lib" ./confi
             --with-tlib=ncurses \
             --enable-gui=gtk2 \
             --enable-cscope \
+            --disable-darwin \
+            --disable-netbeans \
+            --disable-gui \
+            --disable-xsmp \
+            --disable-xsmp-interact \
+            --without-x \
             --silent
 "${MAKE_TOOL}" -j
 "${MAKE_TOOL}" install

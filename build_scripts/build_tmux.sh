@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# Bash script to install Tmux on systems without root access.
 set -e
 
 usage() {
