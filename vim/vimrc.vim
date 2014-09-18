@@ -351,6 +351,7 @@ nnoremap <C-]> :YcmCompleter GoToDeclaration<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:tagbar_autofocus = 1
+let g:tagbar_width = 50
 nmap <F9> :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
