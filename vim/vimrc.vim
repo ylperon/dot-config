@@ -254,6 +254,12 @@ function! s:HighlightFunctionsAndClasses()
   hi def link cCustomClass     Function
 endfunction
 
+" Automatically close Quickfix window if it is the last one.
+aug QFClose
+  au!
+  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
+aug END
+
 " TODO: this should:
 " a) not be called for every filetype
 " b) be in a separate plugin
