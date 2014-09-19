@@ -84,24 +84,30 @@ LIBEVENT_SOURCE_DIR="${TMP_DIR}/libevent-2.0.21-stable"
 cd "${NCURCES_SOURCE_DIR}"
 ./configure --prefix="${INSTALL_PREFIX}" \
             --enable-256-color \
-            --with-shared \
+            --disable-shared \
+            --enable-static \
+            --with-termlib \
+            --with-ticlib \
+            --silent
+"${MAKE_TOOL}" -j --quiet
+"${MAKE_TOOL}" install --quiet
+
+## Building Libevent
+
+cd "${LIBEVENT_SOURCE_DIR}"
+./configure --prefix="${INSTALL_PREFIX}" \
+            --disable-shared \
+            --enable-static \
             --silent
 "${MAKE_TOOL}" -j --quiet
 "${MAKE_TOOL}" install --quiet
 
 ## Building Tmux
 
-cd "${LIBEVENT_SOURCE_DIR}"
-./configure --prefix="${INSTALL_PREFIX}" \
-            --silent
-"${MAKE_TOOL}" -j --quiet
-"${MAKE_TOOL}" install --quiet
-
-## Building Vim
-
 cd "${TMUX_SOURCE_DIR}"
 CPPFLAGS="-I${INSTALL_PREFIX}/include" LDFLAGS="-L${INSTALL_PREFIX}/lib" ./configure \
             --prefix="${INSTALL_PREFIX}" \
+            --enable-static \
             --silent
 "${MAKE_TOOL}" -j --quiet
 "${MAKE_TOOL}" install --quiet
