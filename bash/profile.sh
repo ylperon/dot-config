@@ -1,5 +1,5 @@
-PLATFORM=$(uname)
-if [[ $PLATFORM == *Darwin* ]]; then
+PLATFORM="$(uname)"
+if [[ "${PLATFORM}" == *Darwin* ]]; then
     PS1='me@yazevnul-mac:\W\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
@@ -19,11 +19,12 @@ export LC_TELEPHONE="en_US.UTF-8"
 export LC_MEASUREMENT="en_US.UTF-8"
 export LC_IDENTIFICATION="en_US.UTF-8"
 
-if [[ $PLATFORM == *Darwin* ]]; then
-    export PATH="/usr/local/bin:/usr/texbin:$PATH"
+if [[ "${PLATFORM}" == *Darwin* ]]; then
+    # For Homebrew
+    export PATH="/usr/local/bin:${PATH}"
 
-    # virtualenv for Yandex School of Data Analysis
-    alias -- activate-ysda-virtualenv='source ~/Documents/my/ysda/ysda-env/bin/activate'
+    # For MacTeX
+    export PATH="/usr/texbin:${PATH}"
 fi
 
 export EDITOR=vim
