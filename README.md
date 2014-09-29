@@ -58,7 +58,7 @@ Custom Vim key mappings:
 - <kbd>F7</kbd> — move to the next tab
 - <kbd>F8</kbd> — move to the previous tab
 - <kbd>F9</kbd> — show/close tagbar
-- <kbd>Ctrl+\]</kbd> — goto declaration
+- <kbd>Ctrl</kbd> + <kbd>\]</kbd> — goto declaration
 
 That is how it looks like on Mac OS X in Terminal.app.
 ![Demonstration](http://i.imgur.com/CCqrOAi.png)
