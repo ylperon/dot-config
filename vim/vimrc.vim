@@ -35,7 +35,6 @@ Plugin 'chrisbra/csv.vim'
 
 " Colors
 Plugin 'flazz/vim-colorschemes'
-Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 
 Plugin 'Valloric/YouCompleteMe'
@@ -218,6 +217,12 @@ set list
 set listchars=trail:·
 set listchars=tab:→→
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                           Explore mode settings                         "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <F4> :Vexplore<CR>
+let g:netrw_liststyle=3
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           More involved tweaks                          "
@@ -298,13 +303,6 @@ vnoremap / /\v
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:vundle_default_git_proto = 'git'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                NERDTree                                 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-map <F4> :NERDTreeToggle<CR>
-map! <F4> <ESC>:NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                Airline                                  "
