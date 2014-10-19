@@ -57,7 +57,6 @@ Here are some tips on how to achieve it:
 Vim plugins:
 
 - [Vundle](https://github.com/gmarik/Vundle.vim)
-- [NERDTree](https://github.com/scrooloose/nerdtree)
 - [vim-airline](https://github.com/bling/vim-airline)
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
