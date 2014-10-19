@@ -12,7 +12,7 @@ if !filereadable(expand('$HOME/.vim/bundle/Vundle.vim/README.md'))
     echo "Installing Vundle.."
     echo ""
     silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
+    silent !git clone --quiet https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
 endif
 
 " Setup vundle
