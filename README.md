@@ -4,30 +4,42 @@ Configs for Bash, Vim, Tmux and other.
 TL;DR
 -----
 
-    bash -c "$(curl -fSs https://raw.githubusercontent.com/yazevnul/dot-config/master/remote_deploy.sh)"
+```bash
+bash -c "$(curl -fSs https://raw.githubusercontent.com/yazevnul/dot-config/master/remote_deploy.sh)"
+```
 
 Deployment
 ----------
 
 Deploy all.
 
-    ./deploy.sh
+```bash
+./deploy.sh
+```
 
 Only Bash. Don't forget to replace _yazevnul_ (this is my username) with yours.
 
-    ./bash/deploy.sh
+```bash
+./bash/deploy.sh
+```
 
 Only Tmux.
 
-    ./tmux/deploy.sh
+```bash
+./tmux/deploy.sh
+```
 
 Only Python.
 
-    ./python/deploy.sh
+```bash
+./python/deploy.sh
+```
 
 Only Vim. This might take some time, especially with slow network connection.
 
-    ./vim/deploy.sh
+```bash
+./vim/deploy.sh
+```
 
 
 Details
