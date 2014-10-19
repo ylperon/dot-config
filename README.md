@@ -1,6 +1,11 @@
 Configs for Bash, Vim, Tmux and other.
 =======================================
 
+TL;DR
+-----
+
+    bash -c "(curl -fSs https://raw.githubusercontent.com/yazevnul/dot-config/master/remote_deploy.sh)"
+
 Deployment
 ----------
 
