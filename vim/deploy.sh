@@ -37,7 +37,8 @@ cp $DIR/vimrc.vim $HOME/.vimrc
 printf 'Copying new .vimrc...DONE\n'
 
 printf 'Installing plugins...\n'
-vim +PluginInstall +qall
+# We put newline character into Vim, so we wont need to press ENTER during the installation.
+echo | vim +PluginInstall +qall
 printf 'Installing plugins...DONE\n'
 
 printf 'Installing YouCompleteMe C-family completer...\n'
