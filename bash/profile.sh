@@ -29,5 +29,6 @@ fi
 
 export EDITOR=vim
 export SVN_EDITOR=vim
+export HISTSIZE=100000
 
 unset PLATFORM
