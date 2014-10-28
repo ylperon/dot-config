@@ -17,7 +17,7 @@ def patch_flags_for_this_os():
         FLAGS.append('-isystem')
         FLAGS.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1')
     else:
-        raise RuntimeError('Unknow platform!')
+        raise RuntimeError('Unknown platform!')
 
 
 def FlagsForFile(filename, **kwars):

@@ -37,7 +37,7 @@ cp $DIR/vimrc.vim $HOME/.vimrc
 printf 'Copying new .vimrc...DONE\n'
 
 printf 'Installing plugins...\n'
-# We put newline character into Vim, so we wont need to press ENTER during the installation.
+# We put newline character into Vim, so we won't need to press ENTER during the installation.
 echo | vim +PluginInstall +qall
 printf 'Installing plugins...DONE\n'
 
