@@ -360,3 +360,4 @@ let g:indent_guides_color_change_percent = 7
 "                             chrisbra/csv.vim                            "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+let g:csv_highlight_column = 'y'
