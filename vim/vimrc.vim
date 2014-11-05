@@ -333,7 +333,7 @@ let g:ycm_use_ultisnips_completer = 0
 let g:ycm_goto_buffer_command = 'new-tab'
 let g:ycm_error_symbol = '✗'
 let g:ycm_warning_symbol = '⚠'
-nnoremap <C-]> :YcmCompleter GoToDeclaration<CR>
+nnoremap <C-]> :YcmCompleter GoTo<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                vim-flake8                               "
