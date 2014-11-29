@@ -5,9 +5,9 @@ ZSH_THEME="ys"
 
 PLATFORM="$(uname)"
 if [[ "${PLATFORM}" == *Darwin* ]]; then
-    plugins=(git pip osx brew)
+    plugins=(git svn mercurial mosh tmux pip osx brew)
 else
-    plugins=(git pip)
+    plugins=(git svn mercurial mosh tmux pip)
 fi
 
 export DISABLE_AUTO_UPDATE="true"
