@@ -29,10 +29,4 @@ printf 'Configuring GDB...\n'
 $DIR/gdb/deploy.sh
 printf 'Configuring GDB...DONE\n'
 
-if [ "$1" == '--with-message' ]; then
-    $DIR/bash/add_message.sh
-fi
-
 printf 'Configuring...DONE\n'
-
-unset DIR
