@@ -5,9 +5,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 printf 'Configuring...\n'
 
-printf 'Configuring bash...\n'
-$DIR/bash/deploy.sh
-printf 'Configuring bash...DONE\n'
+printf 'Configuring zsh...\n'
+$DIR/zsh/deploy.sh
+printf 'Configuring zsh...DONE\n'
 
 printf 'Configuring Midnight Commander...\n'
 $DIR/mc/deploy.sh
