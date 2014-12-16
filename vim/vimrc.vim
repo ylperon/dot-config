@@ -385,3 +385,10 @@ endfunction
 nnoremap <silent> <F10> :exec MyGdbGoto()<CR>
 nnoremap <silent> <Leader>Y :ConqueGdbCommand y<CR>
 nnoremap <silent> <Leader>N :ConqueGdbCommand n<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Do things a bit different if we are at Yandex
+let yandex_config_path = $HOME . '/.yandex_vimrc.vim'
+if filereadable(yandex_config_path)
+    exec 'source ' . yandex_config_path
+endif
