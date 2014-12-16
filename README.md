@@ -20,7 +20,7 @@ Deploy all.
 Only Zsh.
 
 ```bash
-./bash/deploy.sh
+./zsh/deploy.sh
 ```
 
 Only Tmux.
