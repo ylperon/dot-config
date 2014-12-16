@@ -386,6 +386,14 @@ nnoremap <silent> <F10> :exec MyGdbGoto()<CR>
 nnoremap <silent> <Leader>Y :ConqueGdbCommand y<CR>
 nnoremap <silent> <Leader>N :ConqueGdbCommand n<CR>
 
+" Delete annoying empty .gdb_history
+function MyGdbCleanUp()
+    exec ':!if [ \! -s .gdb_history ]; then rm --force .gdb_history; fi'
+endfunction
+
+" Delete empty .gdb_history when exit Vim
+autocmd VimLeave * call MyGdbCleanUp()
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Do things a bit different if we are at Yandex
 let yandex_config_path = $HOME . '/.yandex_vimrc.vim'
