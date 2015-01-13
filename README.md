@@ -53,6 +53,7 @@ Here are some tips on how to achieve it:
 - [Mac OS X](https://github.com/tomislav/osx-terminal.app-colors-solarized)
 - [iTerm 2](https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized)
 - [Gnome terminal](https://github.com/Anthony25/gnome-terminal-colors-solarized)
+- [PuTTY](https://github.com/altercation/solarized/tree/master/putty-colors-solarized)
 
 Vim plugins:
 
