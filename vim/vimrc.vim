@@ -334,8 +334,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_use_ultisnips_completer = 0
 let g:ycm_goto_buffer_command = 'new-tab'
-let g:ycm_error_symbol = '✗'
-let g:ycm_warning_symbol = '⚠'
+let g:ycm_error_symbol = '☓'
+let g:ycm_warning_symbol = '☝'
 nnoremap <C-]> :YcmCompleter GoTo<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
