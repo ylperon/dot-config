@@ -49,9 +49,6 @@ Plugin 'a.vim'
 " Python
 Plugin 'andviro/flake8-vim'
 
-" GDB
-Plugin 'vim-scripts/Conque-GDB'
-
 call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -364,35 +361,6 @@ let g:indent_guides_color_change_percent = 7
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:csv_highlight_column = 'y' " unlet g:csv_highlight_column to disable
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       vim-scripts/Conque-GDB                            "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:ConqueTerm_StartMessages = 0
-let g:ConqueTerm_ReadUnfocused = 1
-let g:ConqueTerm_CWInsert = 1
-let g:ConqueTerm_CloseOnEnd = 1
-
-function MyGdbGoto()
-    " Add breakpoint on the line with cursor
-    call conque_gdb#toggle_breakpoint(expand("%:p"), line("."))
-    " Continue execution
-    call conque_gdb#command("continue")
-    " How can we move focus to gdb buffer when input is required by debugged program?
-endfunction
-
-nnoremap <silent> <F10> :exec MyGdbGoto()<CR>
-nnoremap <silent> <Leader>Y :ConqueGdbCommand y<CR>
-nnoremap <silent> <Leader>N :ConqueGdbCommand n<CR>
-
-" Delete annoying empty .gdb_history
-function MyGdbCleanUp()
-    exec ':!if [ \! -s .gdb_history ]; then rm --force .gdb_history; fi'
-endfunction
-
-" Delete empty .gdb_history when exit Vim
-autocmd VimLeave * call MyGdbCleanUp()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Do things a bit different if we are at Yandex
