@@ -10,7 +10,6 @@ else
     plugins=(git svn mercurial mosh pip)
 fi
 
-export DISABLE_AUTO_UPDATE="true"
 export DISABLE_AUTO_TITLE="true"
 
 source $ZSH/oh-my-zsh.sh
