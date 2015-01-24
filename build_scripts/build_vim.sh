@@ -76,11 +76,14 @@ download() {
 
     local target_direcory=$1
 
+    local vim_url='ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2'
+    local ncurses_url='ftp://invisible-island.net/ncurses/ncurses.tar.gz'
+
     curl \
         --fail \
         --silent \
         --show-error \
-        'ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2' \
+        "${vim_url}" \
         | tar \
             --extract \
             --bzip2 \
@@ -89,7 +92,8 @@ download() {
     curl \
         --fail \
         --silent \
-        --show-error 'ftp://invisible-island.net/ncurses/ncurses.tar.gz' \
+        --show-error \
+        "${ncurses_url}" \
         | tar \
             --extract \
             --gzip \
