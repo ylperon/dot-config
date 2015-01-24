@@ -70,7 +70,7 @@ cleanup() {
 }
 
 download() {
-    # $0 -- target directory
+    # $1 -- target directory
     #
     # As a side effect will set global variables $VIM_SOURCE_DIR and $NCURCES_SOURCE_DIR.
 
