@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/bin/bash -e
 #
 # Bash script to install Tmux on systems without root access.
-set -e
 
 usage() {
     printf 'Usage: %s {-p|--prefix} DIR
@@ -9,7 +8,7 @@ usage() {
 Options:
     {-p|--prefix}   Path to the installation directory.
     {-h|--help}     Print usage.
-' "$0" >&2
+' "$1" >&2
     exit 1
 }
 
@@ -49,10 +48,6 @@ fi
 
 INSTALL_PREFIX=$(echo "$(cd "${INSTALL_PREFIX}"; pwd)")
 
-### Actual building and installation.
-
-## Platform dependent options
-
 PLATFORM=$(uname)
 
 MAKE_TOOL='make'
@@ -66,57 +61,125 @@ fi
 ## Download sources
 
 TMP_DIR="$(mktemp -d -t 'tmux_build.XXXXXXXXXX')"
+TMUX_SOURCE_DIR=''
+NCURCES_SOURCE_DIR=''
+LIBEVENT_SOURCE_DIR=''
 
 cleanup() {
-    rm -rf "{TMP_DIR}"
+    rm -rf "${TMP_DIR}"
+}
+
+download() {
+    # $1 -- target directory
+    #
+    # As a side effect will set $TMUX_SOURCE_DIR, $NCURSES_SOURCE_DIR and $LIBEVENT_SOURCE_DIR
+    # global variables.
+
+    local target_direcory=$1
+    local tmux_url='http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz'
+    local ncurses_url='ftp://invisible-island.net/ncurses/ncurses.tar.gz'
+    local libevent_url='http://sourceforge.net/projects/levent/files/libevent/libevent-2.0/libevent-2.0.21-stable.tar.gz/download'
+
+    wget \
+        --no-check-certificate \
+        --quiet \
+        "${tmux_url}" \
+        --output-document - \
+        | tar \
+            --extract \
+            --gzip \
+            --file - \
+            --directory "${target_direcory}" &
+    curl \
+        --fail \
+        --silent \
+        --show-error \
+        "${ncurses_url}" \
+        | tar \
+            --extract \
+            --gzip \
+            --file - \
+            --directory "${target_direcory}" &
+    wget \
+        --no-check-certificate \
+        --quiet \
+        "${libevent_url}" \
+        --output-document - \
+        | tar \
+            --extract \
+            --gzip \
+            --file - \
+            --directory "${target_direcory}" &
+    wait
+
+    TMUX_SOURCE_DIR="${target_direcory}/tmux-1.9a"
+    NCURCES_SOURCE_DIR="${target_direcory}/ncurses-5.9"
+    LIBEVENT_SOURCE_DIR="${target_direcory}/libevent-2.0.21-stable"
+}
+
+build_ncurses() {
+    # $1 -- ncurses sources direcrory
+    # $2 -- installation prefix
+    # $3 -- make tool
+
+    local source_dir=$1
+    local install_prefix=$2
+    local make_tool=$3
+
+    cd "${source_dir}"
+    ./configure --prefix="${install_prefix}" \
+                --enable-256-color \
+                --with-shared \
+                --silent
+    eval "${make_tool}" -j
+    eval "${make_tool}" install
+}
+
+build_libevent() {
+    # $1 -- libevent sources directory
+    # $2 -- installation prefix
+    # $3 -- make tool
+
+    local source_dir=$1
+    local install_prefix=$2
+    local make_tool=$3
+
+    cd "${source_dir}"
+    ./configure \
+        --prefix="${install_prefix}" \
+        --disable-shared \
+        --enable-static \
+        --silent
+    eval "${make_tool}" -j --quiet
+    eval "${make_tool}" install --quiet
+}
+
+build_tmux() {
+    # $1 -- tmux sources directory
+    # $2 -- installation prefix
+    # $3 -- make tool
+
+    local source_dir=$1
+    local install_prefix=$2
+    local make_tool=$3
+
+    cd "${source_dir}"
+    CPPFLAGS="-I${install_prefix}/include" \
+        LDFLAGS="-L${install_prefix}/lib" \
+        ./configure \
+            --prefix="${install_prefix}" \
+            --enable-static \
+            --silent
+    eval "${make_tool}" -j --quiet
+    eval "${make_tool}" install --quiet
 }
 
 trap cleanup EXIT
 
-wget --no-check-certificate --quiet 'http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz' --output-document -\
-    | tar --extract --gzip --file - --directory "${TMP_DIR}" &
-curl --fail --silent --show-error 'ftp://invisible-island.net/ncurses/ncurses.tar.gz' \
-    | tar --extract --gzip --file - --directory "${TMP_DIR}" &
-wget --no-check-certificate --quiet 'http://sourceforge.net/projects/levent/files/libevent/libevent-2.0/libevent-2.0.21-stable.tar.gz/download' --output-document - \
-    | tar --extract --gzip --file - --directory "${TMP_DIR}" &
-wait
-
-TMUX_SOURCE_DIR="${TMP_DIR}/tmux-1.9a"
-NCURCES_SOURCE_DIR="${TMP_DIR}/ncurses-5.9"
-LIBEVENT_SOURCE_DIR="${TMP_DIR}/libevent-2.0.21-stable"
-
-## Building Ncurses
-
-cd "${NCURCES_SOURCE_DIR}"
-./configure --prefix="${INSTALL_PREFIX}" \
-            --enable-256-color \
-            --disable-shared \
-            --enable-static \
-            --with-termlib \
-            --with-ticlib \
-            --silent
-"${MAKE_TOOL}" -j --quiet
-"${MAKE_TOOL}" install --quiet
-
-## Building Libevent
-
-cd "${LIBEVENT_SOURCE_DIR}"
-./configure --prefix="${INSTALL_PREFIX}" \
-            --disable-shared \
-            --enable-static \
-            --silent
-"${MAKE_TOOL}" -j --quiet
-"${MAKE_TOOL}" install --quiet
-
-## Building Tmux
-
-cd "${TMUX_SOURCE_DIR}"
-CPPFLAGS="-I${INSTALL_PREFIX}/include" LDFLAGS="-L${INSTALL_PREFIX}/lib" ./configure \
-            --prefix="${INSTALL_PREFIX}" \
-            --enable-static \
-            --silent
-"${MAKE_TOOL}" -j --quiet
-"${MAKE_TOOL}" install --quiet
+download "${TMP_DIR}"
+build_ncurses "${NCURCES_SOURCE_DIR}" "${INSTALL_PREFIX}" "${MAKE_TOOL}"
+build_libevent "${LIBEVENT_SOURCE_DIR}" "${INSTALL_PREFIX}" "${MAKE_TOOL}"
+build_tmux "${TMUX_SOURCE_DIR}" "${INSTALL_PREFIX}" "${MAKE_TOOL}"
 
 ## Give direction on how to start using it.
 
