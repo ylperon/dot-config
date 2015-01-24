@@ -1,10 +1,9 @@
-#!/bin/bash
+#!/bin/bash -e
 #
 # Bash script to install Vim on systems without root access.
 #
 # Python, Lua, Ruby and Perl support depends on the presence
 # of corresponding development packages.
-set -e
 
 usage() {
     printf 'Usage: %s {-p|--prefix} DIR
@@ -12,7 +11,7 @@ usage() {
 Options:
     {-p|--prefix}   Path to the installation directory.
     {-h|--help}     Print usage.
-' "$0" >&2
+' "$1" >&2
     exit 1
 }
 
@@ -52,10 +51,6 @@ fi
 
 INSTALL_PREFIX=$(echo "$(cd "${INSTALL_PREFIX}"; pwd)")
 
-### Actual building and installation.
-
-## Platform dependent options
-
 PLATFORM=$(uname)
 
 MAKE_TOOL='make'
@@ -66,40 +61,67 @@ elif [[ "${PLATFORM}" == *Darwin* ]]; then
     exit 1
 fi
 
-## Download sources
-
 TMP_DIR="$(mktemp -d -t 'vim_build.XXXXXXXXXX')"
+VIM_SOURCE_DIR=''
+NCURCES_SOURCE_DIR=''
 
 cleanup() {
-    rm -rf "{TMP_DIR}"
+    rm -rf "${TMP_DIR}"
 }
 
-trap cleanup EXIT
+download() {
+    # $0 -- target directory
+    #
+    # As a side effect will set global variables $VIM_SOURCE_DIR and $NCURCES_SOURCE_DIR.
 
-curl --fail --silent --show-error 'ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2' \
-    | tar --extract --bzip2 --file - --directory "${TMP_DIR}" &
-curl --fail --silent --show-error 'ftp://invisible-island.net/ncurses/ncurses.tar.gz' \
-    | tar --extract --gzip --file - --directory "${TMP_DIR}" &
-wait
+    local target_direcory=$1
 
-VIM_SOURCE_DIR="${TMP_DIR}/vim74"
-NCURCES_SOURCE_DIR="${TMP_DIR}/ncurses-5.9"
+    curl --fail --silent --show-error 'ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2' \
+        | tar --extract --bzip2 --file - --directory "${target_direcory}" &
+    curl --fail --silent --show-error 'ftp://invisible-island.net/ncurses/ncurses.tar.gz' \
+        | tar --extract --gzip --file - --directory "${target_direcory}" &
+    wait
 
-## Building Ncurses
+    VIM_SOURCE_DIR="${target_direcory}/vim74"
+    NCURCES_SOURCE_DIR="${target_direcory}/ncurses-5.9"
+}
 
-cd "${NCURCES_SOURCE_DIR}"
-./configure --prefix="${INSTALL_PREFIX}" \
-            --enable-256-color \
-            --with-shared \
-            --silent
-"${MAKE_TOOL}" -j
-"${MAKE_TOOL}" install
+build_ncurses() {
+    # $1 -- ncurses sources direcrory
+    # $2 -- installation prefix
+    # $3 -- make tool
 
-## Building Vim
+    local source_dir=$1
+    local install_prefix=$2
+    local make_tool=$3
 
-cd "${VIM_SOURCE_DIR}"
-CPPFLAGS="-I${INSTALL_PREFIX}/include" LDFLAGS="-L${INSTALL_PREFIX}/lib" ./configure --prefix="${INSTALL_PREFIX}" \
-            --with-compiledby='Kostya Bazhanov. See https://github.com/kostyabazhanov/dot-config/tree/master/build_scripts/build_vim.sh for details.' \
+    cd "${source_dir}"
+    ./configure --prefix="${install_prefix}" \
+                --enable-256-color \
+                --with-shared \
+                --silent
+    eval "${make_tool}" -j
+    eval "${make_tool}" install
+
+}
+
+build_vim() {
+    # $1 -- Vim source directory
+    # $2 -- installation prefix
+    # $3 -- make tool
+
+    local source_dir=$1
+    local install_prefix=$2
+    local make_tool=$3
+
+    local compiled_by_line='Kostya Bazhanov. See https://github.com/yazevnul/dot-config/tree/master/build_scripts/build_vim.sh for details.'
+
+    cd "${source_dir}"
+    CPPFLAGS="-I${install_prefix}/include" \
+        LDFLAGS="-L${install_prefix}/lib" \
+        ./configure \
+            --prefix="${install_prefix}" \
+            --with-compiledby="${compiled_by_line}" \
             --with-features=huge \
             --enable-multibyte \
             --enable-pythoninterp \
@@ -117,8 +139,15 @@ CPPFLAGS="-I${INSTALL_PREFIX}/include" LDFLAGS="-L${INSTALL_PREFIX}/lib" ./confi
             --disable-xsmp-interact \
             --without-x \
             --silent
-"${MAKE_TOOL}" -j
-"${MAKE_TOOL}" install
+    eval "${make_tool}" -j
+    eval "${make_tool}" install
+}
+
+trap cleanup EXIT
+
+download "${TMP_DIR}"
+build_ncurses "${NCURCES_SOURCE_DIR}" "${INSTALL_PREFIX}" "${MAKE_TOOL}"
+build_vim "${VIM_SOURCE_DIR}" "${INSTALL_PREFIX}" "${MAKE_TOOL}"
 
 ## Give direction on how to start using it.
 
