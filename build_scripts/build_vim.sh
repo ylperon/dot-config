@@ -70,6 +70,12 @@ fi
 
 TMP_DIR="$(mktemp -d -t 'vim_build.XXXXXXXXXX')"
 
+cleanup() {
+    rm -rf "{TMP_DIR}"
+}
+
+trap cleanup EXIT
+
 curl --fail --silent --show-error 'ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2' \
     | tar --extract --bzip2 --file - --directory "${TMP_DIR}" &
 curl --fail --silent --show-error 'ftp://invisible-island.net/ncurses/ncurses.tar.gz' \
@@ -117,7 +123,3 @@ CPPFLAGS="-I${INSTALL_PREFIX}/include" LDFLAGS="-L${INSTALL_PREFIX}/lib" ./confi
 ## Give direction on how to start using it.
 
 printf '\nAdd "%s/bin" to your $PATH to use this Vim binary by default.\n' "${INSTALL_PREFIX}"
-
-## Clearing
-
-rm -rf "${TMP_DIR}"

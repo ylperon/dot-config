@@ -67,6 +67,12 @@ fi
 
 TMP_DIR="$(mktemp -d -t 'tmux_build.XXXXXXXXXX')"
 
+cleanup() {
+    rm -rf "{TMP_DIR}"
+}
+
+trap cleanup EXIT
+
 wget --no-check-certificate --quiet 'http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz' --output-document -\
     | tar --extract --gzip --file - --directory "${TMP_DIR}" &
 curl --fail --silent --show-error 'ftp://invisible-island.net/ncurses/ncurses.tar.gz' \
@@ -115,7 +121,3 @@ CPPFLAGS="-I${INSTALL_PREFIX}/include" LDFLAGS="-L${INSTALL_PREFIX}/lib" ./confi
 ## Give direction on how to start using it.
 
 printf '\nAdd "%s/bin" to your $PATH to use this Tmux binary by default.\n' "${INSTALL_PREFIX}"
-
-## Clearing
-
-rm -rf "${TMP_DIR}"
