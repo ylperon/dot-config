@@ -30,7 +30,6 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'mhinz/vim-startify'
 Plugin 'majutsushi/tagbar'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'chrisbra/csv.vim'
 
 " Colors
@@ -348,13 +347,6 @@ let g:tagbar_autofocus = 1
 let g:tagbar_width = 50
 nmap <F9> :TagbarToggle<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                      nathanaelkane/vim-indent-guides                    "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_color_change_percent = 7
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             chrisbra/csv.vim                            "
