@@ -169,6 +169,7 @@ build_tmux() {
         LDFLAGS="-L${install_prefix}/lib" \
         ./configure \
             --prefix="${install_prefix}" \
+            --disable-shared \
             --enable-static \
             --silent
     eval "${make_tool}" -j --quiet
