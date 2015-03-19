@@ -1,11 +1,18 @@
 from os import uname
 
-FLAGS = ['-Wall',
-         '-Wextra',
-         '-Werror',
-         '-std=c++11',
-         '-stdlib=libc++',
-         ]
+FLAGS = [
+    '-Weverything',
+    '-std=c++11',
+
+    # disable annoying warnings
+    '-Wno-c++98-compat-pedantic',
+    '-Wno-global-constructors',
+    '-Wno-missing-prototypes',
+    '-Wno-missing-prototypes',
+    '-Wno-missing-variable-declarations',
+    '-Wno-padded',
+    '-Wno-unused-macros',
+]
 
 
 def patch_flags_for_this_os():
@@ -14,6 +21,7 @@ def patch_flags_for_this_os():
     platform = uname()[0]
 
     if 'Darwin' == platform:
+        FLAGS.append('-stdlib=libc++')
         FLAGS.append('-isystem')
         FLAGS.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1')
     else:
