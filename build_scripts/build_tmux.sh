@@ -129,7 +129,8 @@ build_ncurses() {
     cd "${source_dir}"
     ./configure --prefix="${install_prefix}" \
                 --enable-256-color \
-                --with-shared \
+                --disable-shared \
+                --enable-static \
                 --silent
     eval "${make_tool}" -j
     eval "${make_tool}" install
@@ -168,6 +169,7 @@ build_tmux() {
         LDFLAGS="-L${install_prefix}/lib" \
         ./configure \
             --prefix="${install_prefix}" \
+            --disable-shared \
             --enable-static \
             --silent
     eval "${make_tool}" -j --quiet
