@@ -250,25 +250,11 @@ if has("unix") && strlen($MYVIMRC) < 1
   let $MYVIMRC=$HOME . '/.vimrc'
 endif
 
-" Highlight Class and Function names
-function! s:HighlightFunctionsAndClasses()
-  syn match cCustomFunc      "\w\+\s*\((\)\@="
-  syn match cCustomClass     "\w\+\s*\(::\)\@="
-
-  hi def link cCustomFunc      Function
-  hi def link cCustomClass     Function
-endfunction
-
 " Automatically close Quickfix window if it is the last one.
 aug QFClose
   au!
   au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
 aug END
-
-" TODO: this should:
-" a) not be called for every filetype
-" b) be in a separate plugin
-au vimrc Syntax * call s:HighlightFunctionsAndClasses()
 
 " cindent is a bit too smart for its own good and triggers in text files when
 " you're typing inside parens and then hit enter; it aligns the text with the
