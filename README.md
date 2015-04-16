@@ -67,6 +67,7 @@ Vim plugins:
 - [tagbar](https://github.com/majutsushi/tagbar)
 - [flake8-vim](https://github.com/andviro/flake8-vim)
 - [csv.vim](https://github.com/chrisbra/csv.vim)
+- [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
 
 Custom Vim key mappings:
 
