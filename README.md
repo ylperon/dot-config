@@ -79,4 +79,4 @@ Custom Vim key mappings:
 - <kbd>Ctrl</kbd> + <kbd>\]</kbd> — goto declaration
 
 That is how it looks like on Mac OS X in Terminal.app.
-![Demonstration](http://i.imgur.com/CCqrOAi.png)
+![Demonstration](http://i.imgur.com/xoJOSoV.png)
