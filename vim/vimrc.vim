@@ -44,6 +44,7 @@ Plugin 'vcscommand.vim'
 
 " C++
 Plugin 'a.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " Python
 Plugin 'andviro/flake8-vim'
