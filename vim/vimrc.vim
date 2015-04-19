@@ -49,6 +49,9 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 " Python
 Plugin 'andviro/flake8-vim'
 
+" Tmux syntax support
+Plugin 'whatyouhide/vim-tmux-syntax'
+
 call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
