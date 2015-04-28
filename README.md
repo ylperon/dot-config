@@ -65,7 +65,7 @@ Vim plugins:
 - [a.vim][vim-a]
 - [vim-startify][vim-vim-startify]
 - [tagbar][vim-tagbar]
-- [flake8-vim][vim-flake8]
+- [flake8-vim][vim-flake8-vim]
 - [csv.vim][vim-csv]
 - [vim-cpp-enhanced-highlight][vim-vim-cpp-enhanced-highlight]
 
