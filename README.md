@@ -45,29 +45,29 @@ Only Vim. This might take some time, especially with slow network connection.
 Details
 -------
 
-[Solarized](http://ethanschoonover.com/solarized) colorscheme is used everywhere, so you will need
+[Solarized][solarized] colorscheme is used everywhere, so you will need
 to change you terminal colorscheme in order to make everything look really good.
 
 Here are some tips on how to achieve it:
 
-- [Mac OS X](https://github.com/tomislav/osx-terminal.app-colors-solarized)
-- [iTerm 2](https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized)
-- [Gnome terminal](https://github.com/Anthony25/gnome-terminal-colors-solarized)
-- [PuTTY](https://github.com/altercation/solarized/tree/master/putty-colors-solarized)
+- [Mac OS X][solarized-mac-os-terminal]
+- [iTerm 2][solarized-max-os-iterm2]
+- [Gnome terminal][solarized-gnome-terminal]
+- [PuTTY][solarized-putty]
 
 Vim plugins:
 
-- [Vundle](https://github.com/gmarik/Vundle.vim)
-- [vim-airline](https://github.com/bling/vim-airline)
-- [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-- [vim-fugitive](https://github.com/tpope/vim-fugitive)
-- [vcscommand.vim](https://github.com/vim-scripts/vcscommand.vim)
-- [a.vim](http://www.vim.org/scripts/script.php?script_id=31)
-- [vim-startify](https://github.com/mhinz/vim-startify)
-- [tagbar](https://github.com/majutsushi/tagbar)
-- [flake8-vim](https://github.com/andviro/flake8-vim)
-- [csv.vim](https://github.com/chrisbra/csv.vim)
-- [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
+- [Vundle][vim-vundle]
+- [vim-airline][vim-vim-airline]
+- [YouCompleteMe][vim-youcompleteme]
+- [vim-fugitive][vim-vim-fugitive]
+- [vcscommand.vim][vim-vcscommand]
+- [a.vim][vim-a]
+- [vim-startify][vim-vim-startify]
+- [tagbar][vim-tagbar]
+- [flake8-vim][vim-flake8]
+- [csv.vim][vim-csv]
+- [vim-cpp-enhanced-highlight][vim-vim-cpp-enhanced-highlight]
 
 Custom Vim key mappings:
 
@@ -80,3 +80,20 @@ Custom Vim key mappings:
 
 That is how it looks like on Mac OS X in Terminal.app.
 ![Demonstration](http://i.imgur.com/xoJOSoV.png)
+
+[solarized]: http://ethanschoonover.com/solarized
+[solarized-mac-os-terminal]: https://github.com/tomislav/osx-terminal.app-colors-solarized
+[solarized-mac-os-iterm2]: https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized
+[solarized-gnome-terminal]: https://github.com/Anthony25/gnome-terminal-colors-solarized
+[solarized-putty]: https://github.com/altercation/solarized/tree/master/putty-colors-solarized
+[vim-vundle]: https://github.com/gmarik/Vundle.vim
+[vim-vim-airline]: https://github.com/bling/vim-airline
+[vim-youcompleteme]: https://github.com/Valloric/YouCompleteMe
+[vim-vim-fugitive]: https://github.com/tpope/vim-fugitive
+[vim-vcscommand]: https://github.com/vim-scripts/vcscommand.vim
+[vim-a]: http://www.vim.org/scripts/script.php?script_id=31
+[vim-vim-startify]: https://github.com/mhinz/vim-startify
+[vim-tagbar]: https://github.com/majutsushi/tagbar
+[vim-flake8-vim]: https://github.com/andviro/flake8-vim
+[vim-csv]: https://github.com/chrisbra/csv.vim
+[vim-vim-cpp-enhanced-highlight]: https://github.com/octol/vim-cpp-enhanced-highlight
