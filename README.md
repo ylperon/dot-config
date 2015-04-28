@@ -51,7 +51,7 @@ to change you terminal colorscheme in order to make everything look really good.
 Here are some tips on how to achieve it:
 
 - [Mac OS X][solarized-mac-os-terminal]
-- [iTerm 2][solarized-max-os-iterm2]
+- [iTerm 2][solarized-mac-os-iterm2]
 - [Gnome terminal][solarized-gnome-terminal]
 - [PuTTY][solarized-putty]
 
