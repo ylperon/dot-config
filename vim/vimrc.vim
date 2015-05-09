@@ -52,6 +52,9 @@ Plugin 'andviro/flake8-vim'
 " Tmux syntax support
 Plugin 'whatyouhide/vim-tmux-syntax'
 
+" Rust
+Plugin 'rust-lang/rust.vim'
+
 call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
