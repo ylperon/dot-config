@@ -55,6 +55,9 @@ Plugin 'whatyouhide/vim-tmux-syntax'
 " Rust
 Plugin 'rust-lang/rust.vim'
 
+" TOML
+Plugin 'cespare/vim-toml'
+
 call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

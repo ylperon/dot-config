@@ -69,6 +69,7 @@ Vim plugins:
 - [csv.vim][vim-csv]
 - [vim-cpp-enhanced-highlight][vim-vim-cpp-enhanced-highlight]
 - [rust.vim][vim-rust-vim]
+= [vim-toml][vim-toml]
 
 Custom Vim key mappings:
 
@@ -99,3 +100,4 @@ That is how it looks like on Mac OS X in Terminal.app.
 [vim-csv]: https://github.com/chrisbra/csv.vim
 [vim-vim-cpp-enhanced-highlight]: https://github.com/octol/vim-cpp-enhanced-highlight
 [vim-rust-vim]: https://github.com/rust-lang/rust.vim
+[vim-toml]: https://github.com/cespare/vim-toml
