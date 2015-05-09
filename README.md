@@ -68,6 +68,7 @@ Vim plugins:
 - [flake8-vim][vim-flake8-vim]
 - [csv.vim][vim-csv]
 - [vim-cpp-enhanced-highlight][vim-vim-cpp-enhanced-highlight]
+- [rust.vim][vim-rust-vim]
 
 Custom Vim key mappings:
 
@@ -97,3 +98,4 @@ That is how it looks like on Mac OS X in Terminal.app.
 [vim-flake8-vim]: https://github.com/andviro/flake8-vim
 [vim-csv]: https://github.com/chrisbra/csv.vim
 [vim-vim-cpp-enhanced-highlight]: https://github.com/octol/vim-cpp-enhanced-highlight
+[vim-rust-vim]: https://github.com/rust-lang/rust.vim
