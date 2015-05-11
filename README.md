@@ -69,7 +69,7 @@ Vim plugins:
 - [csv.vim][vim-csv]
 - [vim-cpp-enhanced-highlight][vim-vim-cpp-enhanced-highlight]
 - [rust.vim][vim-rust-vim]
-= [vim-toml][vim-toml]
+- [vim-toml][vim-toml]
 
 Custom Vim key mappings:
 
