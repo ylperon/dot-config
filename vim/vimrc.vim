@@ -58,6 +58,9 @@ Plugin 'rust-lang/rust.vim'
 " TOML
 Plugin 'cespare/vim-toml'
 
+" FTL (FreeMarker Template Language)
+Plugin 'chaquotay/ftl-vim-syntax'
+
 call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
