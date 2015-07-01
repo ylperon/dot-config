@@ -82,6 +82,7 @@ Custom Vim key mappings:
 
 That is how it looks like on Mac OS X in Terminal.app.
 ![Demonstration](http://i.imgur.com/xoJOSoV.png)
+[![asciicast](https://asciinema.org/a/4a15jzq0zomdowfro7shk2d7u.png)](https://asciinema.org/a/4a15jzq0zomdowfro7shk2d7u&theme=solarized-dark)
 
 [solarized]: http://ethanschoonover.com/solarized
 [solarized-mac-os-terminal]: https://github.com/tomislav/osx-terminal.app-colors-solarized
