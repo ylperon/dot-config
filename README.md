@@ -77,8 +77,8 @@ Custom Vim key mappings:
 - <kbd>F7</kbd> — move to the next tab
 - <kbd>F8</kbd> — move to the previous tab
 - <kbd>F9</kbd> — show/close tagbar
-- <kbd>F10</kbd> — stop debugger when it will rich current line
-- <kbd>Ctrl</kbd> + <kbd>\]</kbd> — goto declaration
+- <kbd>F10</kbd> — show compiler diagnostics (only for c,cpp and python file types)
+- <kbd>Ctrl</kbd> + <kbd>\]</kbd> — goto declaration (only for c,cpp and python file types)
 
 That is how it looks like on Mac OS X in Terminal.app.
 ![Demonstration](http://i.imgur.com/xoJOSoV.png)
