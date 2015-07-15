@@ -336,6 +336,7 @@ let g:ycm_error_symbol = '☓'
 let g:ycm_warning_symbol = '☝'
 let g:ycm_filetype_specific_completion_to_disable = {
     \ 'csv' : 1,
+    \ 'diff' : 1,
     \ 'gitcommit' : 1,
     \ 'help' : 1,
     \ 'svn' : 1,
