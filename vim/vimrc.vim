@@ -342,6 +342,7 @@ let g:ycm_filetype_specific_completion_to_disable = {
     \ 'text' : 1
     \}
 autocmd FileType c,cpp,python nnoremap <buffer> <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType c,cpp,python nnoremap <buffer> <F10> :YcmDiags<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                vim-flake8                               "
