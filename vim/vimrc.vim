@@ -341,7 +341,7 @@ let g:ycm_filetype_specific_completion_to_disable = {
     \ 'svn' : 1,
     \ 'text' : 1
     \}
-nnoremap <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType c,cpp,python nnoremap <buffer> <C-]> :YcmCompleter GoTo<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                vim-flake8                               "
