@@ -347,7 +347,6 @@ let g:ycm_filetype_specific_completion_to_disable = {
     \ 'qf' : 1,
     \ 'svn' : 1,
     \ 'tagbar' : 1,
-    \ 'text' : 1
     \ 'text' : 1,
     \ 'unite' : 1,
     \ 'vimwiki' : 1
