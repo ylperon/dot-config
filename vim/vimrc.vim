@@ -340,7 +340,7 @@ let g:ycm_filetype_specific_completion_to_disable = {
     \ 'gitcommit' : 1,
     \ 'help' : 1,
     \ 'infolog' : 1,
-    \ 'mail' : 1
+    \ 'mail' : 1,
     \ 'markdown' : 1,
     \ 'notes' : 1,
     \ 'pandoc' : 1,
@@ -350,7 +350,7 @@ let g:ycm_filetype_specific_completion_to_disable = {
     \ 'text' : 1
     \ 'text' : 1,
     \ 'unite' : 1,
-    \ 'vimwiki' : 1,
+    \ 'vimwiki' : 1
     \}
 autocmd FileType c,cpp,python nnoremap <buffer> <C-]> :YcmCompleter GoTo<CR>
 autocmd FileType c,cpp,python nnoremap <buffer> <F10> :YcmDiags<CR>
