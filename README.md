@@ -70,6 +70,7 @@ Vim plugins:
 - [vim-cpp-enhanced-highlight][vim-vim-cpp-enhanced-highlight]
 - [rust.vim][vim-rust-vim]
 - [vim-toml][vim-toml]
+- [vim-commentary][vim-vim-commentary]
 
 Custom Vim key mappings:
 
@@ -102,3 +103,4 @@ That is how it looks like on Mac OS X in Terminal.app.
 [vim-vim-cpp-enhanced-highlight]: https://github.com/octol/vim-cpp-enhanced-highlight
 [vim-rust-vim]: https://github.com/rust-lang/rust.vim
 [vim-toml]: https://github.com/cespare/vim-toml
+[vim-vim-commentary]: https://github.com/tpope/vim-commentary

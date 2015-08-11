@@ -28,8 +28,11 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'mhinz/vim-startify'
 Plugin 'majutsushi/tagbar'
+Plugin 'mhinz/vim-startify'
+Plugin 'tpope/vim-commentary'
+
+" *SV
 Plugin 'chrisbra/csv.vim'
 
 " Colors
