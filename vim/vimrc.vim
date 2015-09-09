@@ -90,11 +90,7 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " DISPLAY SETTINGS
-
-let g:gruvbox_italic=0  " Mac OS X Terminal doesn't support italic fonts since Snow Leopard
-let g:gruvbox_bold=0    " Doesn't looks good for me, maybe require some time to adopt
-
-colorscheme gruvbox     " sets the colorscheme
+colorscheme solarized   " sets the colorscheme
 set background=dark     " enable for dark terminals
 set scrolloff=5         " 2 lines above/below cursor when scrolling
 set showmatch           " show matching bracket (briefly jump)
@@ -310,11 +306,6 @@ vnoremap / /\v
 "                                Vundle                                   "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Actually these lines doesn't have any effect, but we leave them here for
-" convenience
-let g:gruvbox_italic=0
-let g:gruvbox_bold=0
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                Vundle                                   "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -326,7 +317,7 @@ let g:vundle_default_git_proto = 'git'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set laststatus=2
-let g:airline_theme='gruvbox'
+let g:airline_theme='solarized'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
