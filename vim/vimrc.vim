@@ -28,16 +28,17 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-commentary'
 
-" *SV
+" {C,T}SV
 Plugin 'chrisbra/csv.vim'
 
 " Colors
 Plugin 'flazz/vim-colorschemes'
-Plugin 'bling/vim-airline'
+Plugin 'morhetz/gruvbox'
 
 Plugin 'Valloric/YouCompleteMe'
 
