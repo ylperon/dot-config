@@ -71,6 +71,8 @@ Vim plugins:
 - [rust.vim][vim-rust-vim]
 - [vim-toml][vim-toml]
 - [vim-commentary][vim-vim-commentary]
+- [UltiSnips][vim-ultisnips]
+- [vim-snippets][vim-vim-snippets]
 
 Custom Vim key mappings:
 
@@ -80,6 +82,9 @@ Custom Vim key mappings:
 - <kbd>F9</kbd> — show/close tagbar
 - <kbd>F10</kbd> — show compiler diagnostics (only for c,cpp and python file types)
 - <kbd>Ctrl</kbd> + <kbd>\]</kbd> — goto declaration (only for c,cpp and python file types)
+- <kbd>Ctrl</kbd> + <kbd>y</kbd> — expand snippet
+- <kbd>Ctrl</kbd> + <kbd>j</kbd> — jump forward withing snippet
+- <kbd>Ctrl</kbd> + <kbd>k</kbd> — jump backward withing snippet
 
 That is how it looks like on Mac OS X in Terminal.app.
 ![Demonstration](http://i.imgur.com/xoJOSoV.png)
@@ -104,3 +109,5 @@ That is how it looks like on Mac OS X in Terminal.app.
 [vim-rust-vim]: https://github.com/rust-lang/rust.vim
 [vim-toml]: https://github.com/cespare/vim-toml
 [vim-vim-commentary]: https://github.com/tpope/vim-commentary
+[vim-ultisnips]: https://github.com/sirver/UltiSnips
+[vim-vim-snippets]: https://github.com/honza/vim-snippets
