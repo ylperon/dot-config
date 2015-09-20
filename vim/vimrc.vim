@@ -364,7 +364,6 @@ autocmd FileType c,cpp,python nnoremap <buffer> <F10> :YcmDiags<CR>
 "                               UltiSnips                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:UltiSnipsListSnippets = '<c-u>'
 let g:UltiSnipsExpandTrigger = '<c-y>'
 let g:UltiSnipsJumpForwardTrigger = '<c-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
