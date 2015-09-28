@@ -359,6 +359,7 @@ let g:ycm_filetype_specific_completion_to_disable = {
     \}
 autocmd FileType c,cpp,python nnoremap <buffer> <C-]> :YcmCompleter GoTo<CR>
 autocmd FileType c,cpp,python nnoremap <buffer> <F10> :YcmDiags<CR>
+autocmd FileType c,ccp,python nnoremap <buffer> <C-h> :YcmCompleter GetDoc<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               UltiSnips                                 "

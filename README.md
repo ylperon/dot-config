@@ -82,6 +82,7 @@ Custom Vim key mappings:
 - <kbd>F9</kbd> — show/close tagbar
 - <kbd>F10</kbd> — show compiler diagnostics (only for c,cpp and python file types)
 - <kbd>Ctrl</kbd> + <kbd>\]</kbd> — goto declaration (only for c,cpp and python file types)
+- <kbd>Ctrl</kbd> + <kbd>h</kbd> — show documentation with quick info
 - <kbd>Ctrl</kbd> + <kbd>y</kbd> — expand snippet
 - <kbd>Ctrl</kbd> + <kbd>j</kbd> — jump forward withing snippet
 - <kbd>Ctrl</kbd> + <kbd>k</kbd> — jump backward withing snippet
