@@ -264,7 +264,7 @@ endif
 augroup vimrc
   " Automatically delete trailing DOS-returns and whitespace on file open and
   " write.
-  autocmd BufRead,BufWritePre,FileWritePre c,cpp,python silent! %s/[\r \t]\+$//
+  autocmd BufRead,BufWritePre,FileWritePre * silent! %s/[\r \t]\+$//
 augroup END
 
 " Sometimes, $MYVIMRC does not get set even though the vimrc is sourced
