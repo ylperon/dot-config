@@ -5,9 +5,9 @@ ZSH_THEME="ys"
 
 PLATFORM="$(uname)"
 if [[ "${PLATFORM}" == *Darwin* ]]; then
-    plugins=(git svn mercurial mosh pip osx brew vi-mode)
+    plugins=(git svn mercurial mosh pip vi-mode colored-man osx brew)
 else
-    plugins=(git svn mercurial mosh pip vi-mode)
+    plugins=(git svn mercurial mosh pip vi-mode colored-man)
 fi
 
 export DISABLE_AUTO_TITLE="true"
