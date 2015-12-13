@@ -234,6 +234,7 @@ set splitright
 
 " Lines enumeration
 set number
+set relativenumber
 
 " Highlight uwanted spaces, nice for tsv files viewing
 set list
