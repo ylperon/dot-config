@@ -67,6 +67,9 @@ Plugin 'cespare/vim-toml'
 " FTL (FreeMarker Template Language)
 Plugin 'chaquotay/ftl-vim-syntax'
 
+" Ragel
+Plugin 'jneen/ragel.vim'
+
 call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
