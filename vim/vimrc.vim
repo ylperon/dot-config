@@ -232,6 +232,9 @@ autocmd FileType json setlocal ts=2 sts=2 sw=2
 
 autocmd vimrc FileType snippets set noexpandtab
 
+autocmd BufNewFile,BufRead *.rl5 set filetype=ragel
+autocmd BufNewFile,BufRead *.rl6 set filetype=ragel
+
 " Open splits to the right
 set splitright
 
