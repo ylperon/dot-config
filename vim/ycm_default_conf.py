@@ -90,7 +90,7 @@ def get_extra_flags_for_this_host():
 
     flags = ['-I', '/usr/local/Cellar/blaze-lib/2.4/include/',
              '-I', '/usr/local/Cellar/boost/1.59.0/include/',
-             '-I', '/usr/local/Cellar/eigen/3.2.6/include',
+             '-I', '/usr/local/Cellar/eigen/3.2.6/include/',
              ]
 
     return flags
