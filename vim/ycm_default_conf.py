@@ -49,9 +49,9 @@ def _get_subprocess_output(cmd):
 @memoize
 def retrieve_system_headers(compiler):
     if 'clang' == compiler:
-        cmd = ('clang++', '-std=c++14', '-v', '-E', '-x', 'c++', '-', )
+        cmd = ('clang++', '-v', '-E', '-x', 'c++', '-', )
     elif 'gcc' == compiler:
-        cmd = ('g++', '-std=c++14', '-v', '-E', '-x', 'c++', '-', )
+        cmd = ('g++', '-v', '-E', '-x', 'c++', '-', )
 
     output = _get_subprocess_output(cmd)
     INCLUDES_RE = re.compile(
