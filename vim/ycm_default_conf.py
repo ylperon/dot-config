@@ -1,4 +1,5 @@
 import functools
+import getpass
 import inspect
 import os
 import re
@@ -78,8 +79,26 @@ def get_extra_flags_for_this_os():
 
 
 @memoize
+def get_extra_flags_for_this_host():
+    username = getpass.getuser()
+    if 'yazevnul' != username:
+        return []
+
+    platform = os.uname()[0]
+    if 'Darwin' != platform:
+        return []
+
+    flags = ['-I', '/usr/local/Cellar/blaze-lib/2.4/include/',
+             '-I', '/usr/local/Cellar/boost/1.59.0/include/',
+             ]
+
+    return flags
+
+
+@memoize
 def get_flags():
-    return _BASE_FLAGS + get_extra_flags_for_this_os()
+    flags = _BASE_FLAGS + get_extra_flags_for_this_os()
+    return flags + get_extra_flags_for_this_host()
 
 
 def FlagsForFile(filename, **kwars):
