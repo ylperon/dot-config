@@ -368,6 +368,9 @@ autocmd FileType c,cpp,python nnoremap <buffer> <C-]> :YcmCompleter GoTo<CR>
 autocmd FileType c,cpp,python nnoremap <buffer> <F10> :YcmDiags<CR>
 autocmd FileType c,ccp,python nnoremap <buffer> <C-h> :YcmCompleter GetDoc<CR>
 
+" Special case for Rust, works only on my personal machine
+let g:ycm_rust_src_path = '/usu/local/Cellar/rust/1.6.0/src/'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               UltiSnips                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
