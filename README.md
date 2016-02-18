@@ -59,6 +59,7 @@ Vim plugins:
 
 - [Vundle][vim-vundle]
 - [vim-airline][vim-vim-airline]
+- [vim-airline-themes][vim-vim-airline-themes]
 - [YouCompleteMe][vim-youcompleteme]
 - [vim-fugitive][vim-vim-fugitive]
 - [vcscommand.vim][vim-vcscommand]
@@ -96,8 +97,9 @@ That is how it looks like on Mac OS X in Terminal.app.
 [solarized-mac-os-iterm2]: https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized
 [solarized-gnome-terminal]: https://github.com/Anthony25/gnome-terminal-colors-solarized
 [solarized-putty]: https://github.com/altercation/solarized/tree/master/putty-colors-solarized
-[vim-vundle]: https://github.com/gmarik/Vundle.vim
-[vim-vim-airline]: https://github.com/bling/vim-airline
+[vim-vundle]: https://github.com/VundleVim/Vundle.vim
+[vim-vim-airline]: https://github.com/vim-airline/vim-airline
+[vim-vim-airline-themes]: https://github.com/vim-airline/vim-airline-themes
 [vim-youcompleteme]: https://github.com/Valloric/YouCompleteMe
 [vim-vim-fugitive]: https://github.com/tpope/vim-fugitive
 [vim-vcscommand]: https://github.com/vim-scripts/vcscommand.vim

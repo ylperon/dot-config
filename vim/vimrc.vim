@@ -12,7 +12,7 @@ if !filereadable(expand('$HOME/.vim/bundle/Vundle.vim/README.md'))
     echo "Installing Vundle.."
     echo ""
     silent !mkdir -p ~/.vim/bundle
-    silent !git clone --quiet https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
+    silent !git clone --quiet https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
 endif
 
 " Setup vundle
@@ -26,9 +26,10 @@ call vundle#begin()
 " vundle will add the plugin folders to the runtimepath only after it has seen
 " the plugin's Plugin command.
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'majutsushi/tagbar'
 Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-commentary'
@@ -46,10 +47,10 @@ Plugin 'honza/vim-snippets'
 
 " SVN and Git
 Plugin 'tpope/vim-fugitive'
-Plugin 'vcscommand.vim'
+Plugin 'vim-scripts/vcscommand.vim'
 
 " C++
-Plugin 'a.vim'
+Plugin 'vim-scripts/a.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " Python
