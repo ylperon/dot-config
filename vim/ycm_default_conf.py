@@ -99,8 +99,8 @@ def get_extra_flags_for_this_host():
 
 @memoize
 def get_flags():
-    flags = _BASE_FLAGS + get_extra_flags_for_this_host()
-    return flags + get_extra_flags_for_this_os()
+    flags = _BASE_FLAGS + get_extra_flags_for_this_os()
+    return flags + get_extra_flags_for_this_host()
 
 
 def FlagsForFile(filename, **kwars):
