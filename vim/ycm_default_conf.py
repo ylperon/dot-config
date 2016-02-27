@@ -61,7 +61,8 @@ def retrieve_system_headers(compiler):
     includes = INCLUDES_RE.findall(output)
     assert includes, 'Can\'t parse system includes'
     assert 1 == len(includes), 'System includes are ambiguous'
-    return [os.path.abspath(x.strip()) for x in includes[0].split('\n')]
+    return [os.path.abspath(x.strip()) for x in includes[0].split('\n') if '(framework directory)'
+            not in x]
 
 
 @memoize
