@@ -63,7 +63,7 @@ Vim plugins:
 - [YouCompleteMe][vim-youcompleteme]
 - [vim-fugitive][vim-vim-fugitive]
 - [vcscommand.vim][vim-vcscommand]
-- [a.vim][vim-a]
+- [vim-fswitch][vim-vim-fswitch]
 - [vim-startify][vim-vim-startify]
 - [tagbar][vim-tagbar]
 - [flake8-vim][vim-flake8-vim]
@@ -103,7 +103,7 @@ That is how it looks like on Mac OS X in Terminal.app.
 [vim-youcompleteme]: https://github.com/Valloric/YouCompleteMe
 [vim-vim-fugitive]: https://github.com/tpope/vim-fugitive
 [vim-vcscommand]: https://github.com/vim-scripts/vcscommand.vim
-[vim-a]: http://www.vim.org/scripts/script.php?script_id=31
+[vim-vim-fswitch]: https://github.com/derekwyatt/vim-fswitch
 [vim-vim-startify]: https://github.com/mhinz/vim-startify
 [vim-tagbar]: https://github.com/majutsushi/tagbar
 [vim-flake8-vim]: https://github.com/andviro/flake8-vim

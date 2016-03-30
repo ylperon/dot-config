@@ -50,7 +50,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/vcscommand.vim'
 
 " C++
-Plugin 'vim-scripts/a.vim'
+Plugin 'derekwyatt/vim-fswitch'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " Python
