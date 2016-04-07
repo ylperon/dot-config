@@ -39,7 +39,6 @@ Plugin 'chrisbra/csv.vim'
 
 " Colors
 Plugin 'flazz/vim-colorschemes'
-Plugin 'morhetz/gruvbox'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
