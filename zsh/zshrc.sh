@@ -36,5 +36,6 @@ export SVN_EDITOR=vim
 export HISTSIZE=100000
 
 export HOMEBREW_NO_ANALYTICS=1
+export RUST_SRC_PATH=/usr/local/Cellar/rust/1.12.0/src
 
 unset PLATFORM
