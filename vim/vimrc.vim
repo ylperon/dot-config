@@ -365,9 +365,9 @@ let g:ycm_filetype_specific_completion_to_disable = {
     \ 'unite' : 1,
     \ 'vimwiki' : 1
     \}
-autocmd FileType c,cpp,python nnoremap <buffer> <C-]> :YcmCompleter GoTo<CR>
-autocmd FileType c,cpp,python nnoremap <buffer> <F10> :YcmDiags<CR>
-autocmd FileType c,cpp,python nnoremap <buffer> <C-h> :YcmCompleter GetDoc<CR>
+autocmd FileType c,cpp,python,rust nnoremap <buffer> <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType c,cpp,python,rust nnoremap <buffer> <F10> :YcmDiags<CR>
+autocmd FileType c,cpp,python,rust nnoremap <buffer> <C-h> :YcmCompleter GetDoc<CR>
 
 " Special case for Rust, works only on my personal machine
 let g:ycm_rust_src_path = '/usr/local/Cellar/rust/1.12.0/src/'
