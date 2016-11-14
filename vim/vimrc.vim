@@ -234,6 +234,7 @@ autocmd vimrc FileType snippets set noexpandtab
 
 autocmd BufNewFile,BufRead *.rl5 set filetype=ragel
 autocmd BufNewFile,BufRead *.rl6 set filetype=ragel
+autocmd BufNewFile,BufRead *.gztproto set filetype=proto
 
 " Open splits to the right
 set splitright
