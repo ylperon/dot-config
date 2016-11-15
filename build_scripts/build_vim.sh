@@ -76,23 +76,27 @@ download() {
 
     local target_direcory=$1
 
-    local vim_url='https://vim.googlecode.com/archive/eaf81729ef02c04c6c7290f6532743a04d1bb8ac.tar.gz'
-    local ncurses_url='ftp://invisible-island.net/ncurses/ncurses.tar.gz'
+    local vim_url='https://github.com/vim/vim/archive/v8.0.0085.tar.gz'
+    local ncurses_url='http://invisible-mirror.net/archives/ncurses/ncurses-6.0.tar.gz'
 
-    curl \
-        --fail \
-        --silent \
-        --show-error \
+    wget --verbose \
+         --tries 10 \
+         --progress dot \
+         --retry-connrefused \
+         --no-check-certificate \
+         --output-document - \
         "${vim_url}" \
         | tar \
             --extract \
             --gzip \
             --file - \
             --directory "${target_direcory}" &
-    curl \
-        --fail \
-        --silent \
-        --show-error \
+    wget --verbose \
+         --tries 10 \
+         --progress dot \
+         --retry-connrefused \
+         --no-check-certificate \
+         --output-document - \
         "${ncurses_url}" \
         | tar \
             --extract \
@@ -101,8 +105,8 @@ download() {
             --directory "${target_direcory}" &
     wait
 
-    VIM_SOURCE_DIR="${target_direcory}/vim-eaf81729ef02"
-    NCURCES_SOURCE_DIR="${target_direcory}/ncurses-5.9"
+    VIM_SOURCE_DIR="${target_direcory}/vim-8.0.0085"
+    NCURCES_SOURCE_DIR="${target_direcory}/ncurses-6.0"
 }
 
 build_ncurses() {
@@ -120,7 +124,7 @@ build_ncurses() {
         --enable-256-color \
         --with-shared \
         --silent
-    eval "${make_tool}" -j
+    eval nice "${make_tool}" -j
     eval "${make_tool}" install
 }
 
