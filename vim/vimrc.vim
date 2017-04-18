@@ -242,7 +242,8 @@ set splitright
 
 " Lines enumeration
 set number
-set relativenumber
+" Enabling this open will make Vim really slow!
+" set relativenumber
 
 " Highlight uwanted spaces, nice for tsv files viewing
 set list
