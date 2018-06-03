@@ -5,7 +5,7 @@ ZSH_THEME="ys"
 
 PLATFORM="$(uname)"
 if [[ "${PLATFORM}" == *Darwin* ]]; then
-    plugins=(git svn mercurial mosh pip vi-mode colored-man brew)
+    plugins=(git svn mercurial mosh pip vi-mode colored-man)
 else
     plugins=(git svn mercurial mosh pip vi-mode colored-man)
 fi
