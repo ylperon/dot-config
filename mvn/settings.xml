@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <profiles>
+        <profile>
+            <id>catboost</id>
+            <properties>
+                <gpg.executable>gpg</gpg.executable>
+                <gpg.keyname>B6A0456750E174A4A9AC7CDC29BB621647755056</gpg.keyname>
+                <gpg.passphrase>${env.CATBOOST_GPG_PRIVATE_KEY_PASSPHRASE}</gpg.passphrase>
+            </properties>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>catboost</activeProfile>
+    </activeProfiles>
+</settings>
