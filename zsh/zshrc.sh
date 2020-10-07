@@ -5,9 +5,9 @@ ZSH_THEME="ys"
 
 PLATFORM="$(uname)"
 if [[ "${PLATFORM}" == *Darwin* ]]; then
-    plugins=(git svn mercurial mosh pip vi-mode colored-man)
+    plugins=(git svn mercurial mosh pip vi-mode)
 else
-    plugins=(git svn mercurial mosh pip vi-mode colored-man)
+    plugins=(git svn mercurial mosh pip vi-mode)
 fi
 
 export DISABLE_AUTO_TITLE="true"
@@ -36,6 +36,5 @@ export SVN_EDITOR=vim
 export HISTSIZE=100000
 
 export HOMEBREW_NO_ANALYTICS=1
-export RUST_SRC_PATH=/usr/local/Cellar/rust/1.12.0/src
 
 unset PLATFORM
