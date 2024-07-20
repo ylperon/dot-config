@@ -398,10 +398,7 @@ nmap <F9> :TagbarToggle<CR>
 let g:csv_highlight_column = 'y' " unlet g:csv_highlight_column to disable
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"             Do things a bit different if we are at Yandex               "
-"                     (should go last in the file)                        "
+"                            rust-lang/rust.vim                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let yandex_config_path = $HOME . '/.yandex_vimrc.vim'
-if filereadable(yandex_config_path)
-    exec 'source ' . yandex_config_path
-endif
+
+let g:rustfmt_autosave = 1
