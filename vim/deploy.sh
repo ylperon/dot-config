@@ -43,7 +43,7 @@ printf 'Installing plugins...DONE\n'
 
 printf 'Installing YouCompleteMe C-family completer...\n'
 cd $HOME/.vim/bundle/YouCompleteMe/
-./install.py --clang-completer
+./install.py --clang-completer --rust-completer
 printf 'Installing YouCompleteMe C-family completer...DONE\n'
 
 printf 'Copying default YouCompleteMe config...\n'

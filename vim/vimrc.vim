@@ -368,7 +368,8 @@ let g:ycm_filetype_specific_completion_to_disable = {
     \ 'unite' : 1,
     \ 'vimwiki' : 1
     \}
-autocmd FileType c,cpp,python,rust nnoremap <buffer> <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType c,cpp,python,rust nnoremap <buffer> gd :YcmCompleter GoToDeclaration<CR>
+autocmd FileType c,cpp,python,rust nnoremap <buffer> gD :YcmCompleter GoToDefinition<CR>
 autocmd FileType c,cpp,python,rust nnoremap <buffer> <F10> :YcmDiags<CR>
 autocmd FileType c,cpp,python,rust nnoremap <buffer> <C-h> :YcmCompleter GetDoc<CR>
 
